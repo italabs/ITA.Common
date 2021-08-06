@@ -1,0 +1,1 @@
+﻿create table ab(a int, b int);

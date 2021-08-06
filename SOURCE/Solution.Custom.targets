@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- 
+	If you receive a security warning from Visual Studio 2008, add to this registry key:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\9.0\MSBuild\SafeImports
+
+	String value with any name and full path to Solution.Custom.targets (this file)
+
+	PS: or just remove check box on 'Warn me on every project file' ;)
+-->
+  <Import Project="..\EXTERNALS\ThirdParty\Fody\bin\build\Fody.targets" />
+</Project>

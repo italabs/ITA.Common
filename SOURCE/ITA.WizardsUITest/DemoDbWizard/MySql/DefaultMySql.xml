@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<upgrade minimal="1.0.0.0">
+  <steps>
+    <step id="10" from="1.0.0.0" to="1.5.1.1" type="sql" source="MySql.Update.add_abc.sql" description="Добавление таблицы ABC" complexity="1" timeout="10000" />    
+  </steps>
+</upgrade>

@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.2;net462</TargetFrameworks>
+  </PropertyGroup>
+
+    <PropertyGroup>
+      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\SignKey\ITA.Common.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+    
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\OUTPUT\Bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\OUTPUT\Bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.2|AnyCPU'">
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.2|AnyCPU'">
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SdkProject>True</SdkProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ITA.Common\ITA.Common.csproj" />
+    <ProjectReference Include="..\ITA.Common.Host\ITA.Common.Host.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ITA.MethodDecoratorInterfaces">
+      <HintPath>..\..\EXTERNALS\ThirdParty\ITA.MethodDecorator.Fody\ITA.MethodDecoratorInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\EXTERNALS\ThirdParty\log4net\bin\log4net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CommonPerfCounterInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="EtwProviderInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="HostInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="HostInstaller.Designer.cs">
+      <DependentUpon>HostInstaller.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="HostInstaller.resx">
+      <DependentUpon>HostInstaller.cs</DependentUpon>
+      <LastGenOutput>HostInstaller.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
+    
+</Project>

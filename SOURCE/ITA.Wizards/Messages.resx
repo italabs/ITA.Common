@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WIZ_SRV_LOGIN_SUCCEEDED" xml:space="preserve">
+    <value>Connection to the server has been successfully performed.</value>
+  </data>
+  <data name="WIZ_SRV_ORACLE_NOT_FOUND" xml:space="preserve">
+    <value>Unable to initialize Oracle Data Provider for .NET.
+It is either not installed or not properly configured.</value>
+  </data>
+  <data name="WIZ_DB_ENTER_USER" xml:space="preserve">
+    <value>User login is not specified</value>
+  </data>
+  <data name="WIZ_AD_SID_IS_NULL" xml:space="preserve">
+    <value>The current user is not defined</value>
+  </data>
+  <data name="WIZ_AD_SELECT_CONTAINER" xml:space="preserve">
+    <value>You must select the Active Directory container object</value>
+  </data>
+  <data name="WIZ_DB_ALREADY_EXISTS" xml:space="preserve">
+    <value>Database {0} already exists. Enter a different name</value>
+  </data>
+  <data name="WIZ_DB_ENTER_PASSWORD" xml:space="preserve">
+    <value>The password must contain at least 8 and not more than 80 characters, and also contain uppercase/lowercase letters and numbers</value>
+  </data>
+  <data name="WIZ_SRV_LOGIN_FAILED" xml:space="preserve">
+    <value>Unable to connect to {0}.</value>
+  </data>
+  <data name="WIZ_DB_RECONFIRM_PASSWORD" xml:space="preserve">
+    <value>The passwords entered do not match</value>
+  </data>
+  <data name="WIZ_AD_SID_NOT_FOUND" xml:space="preserve">
+    <value>Current user {0} does not belong to the specified container {1}. Select a different container objects</value>
+  </data>
+  <data name="WIZ_DB_LOGIN_FAILED" xml:space="preserve">
+    <value>Cannot connect to the DATABASE {0} user {1}.</value>
+  </data>
+  <data name="WIZ_INVALID_DATABASE" xml:space="preserve">
+    <value>Incorrect database or you do not have access.</value>
+  </data>
+  <data name="WIZ_INVALID_CONNECTION_STRING" xml:space="preserve">
+    <value>Could not open a connection to the database. Check the connection string.</value>
+  </data>
+  <data name="WIZ_CAPTION_CONNECT" xml:space="preserve">
+    <value>{0}-connect to a database</value>
+  </data>
+  <data name="WIZ_DB_SELECT_DB" xml:space="preserve">
+    <value>No database is selected.</value>
+  </data>
+  <data name="WIZ_DB_USER_ALREADY_EXISTS" xml:space="preserve">
+    <value>The specified login {0} already exists. Enter a different name.</value>
+  </data>
+  <data name="WIZ_CAPTION_CREATE" xml:space="preserve">
+    <value>{0}-create a database</value>
+  </data>
+  <data name="WIZ_DB_ENTER_DB" xml:space="preserve">
+    <value>Database name not specified</value>
+  </data>
+  <data name="WIZ_SRV_SELECT" xml:space="preserve">
+    <value>Do not specify a database server</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_DIGIT" xml:space="preserve">
+    <value>Password must include numbers</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_LOWER" xml:space="preserve">
+    <value>The password must contain characters in lowercase</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_SPECIAL" xml:space="preserve">
+    <value>The password must contain special characters</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_UPPER" xml:space="preserve">
+    <value>The password must contain uppercase characters</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_TOO_SHORT" xml:space="preserve">
+    <value>The password must contain at least {0} characters</value>
+  </data>
+  <data name="WIZ_DB_INVALID_DATABASE_NAME" xml:space="preserve">
+    <value>Valid characters: A-Z, a-z, 0-9 and _</value>
+  </data>
+  <data name="WIZ_DB_INVALID_LOGIN" xml:space="preserve">
+    <value>Valid characters: A-Z, a-z, 0-9 and _</value>
+  </data>
+  <data name="WIZ_DB_INVALID_DATABASE_NAME_EXT" xml:space="preserve">
+    <value>Invalid database name. In the name of the only characters, numbers and underscores</value>
+  </data>
+  <data name="WIZ_DB_INVALID_LOGIN_EXT" xml:space="preserve">
+    <value>Invalid user login. The name can contain only characters, numbers and underscores</value>
+  </data>
+  <data name="WIZ_DB_WIZ_INVALID_PASSWORD_SYMBOLS" xml:space="preserve">
+    <value>Password should not contain [or]</value>
+  </data>
+  <data name="WIZ_SRV_DB_USER_IS_NOT_ADMIN" xml:space="preserve">
+    <value>The selected user has no administrative rights that is required to create the database. Add the user to the Server sysadmin group.</value>
+  </data>
+  <data name="WIZ_SRV_WINDOWS_USER_IS_NOT_ADMIN" xml:space="preserve">
+    <value>The current Windows user does not have administrative rights required to create the database. Add the user to the Server sysadmin group.</value>
+  </data>
+  <data name="WIZ_DB_GRANT_PERMISSION_ERROR" xml:space="preserve">
+    <value>An error occurred while granting rights to the current user to have access to an existing database. After Setup completes, you must configure the service access to the database manually, or restart the wizard database connection under a user account with rights of securityadmin.</value>
+  </data>
+  <data name="WIZ_SRV_INVALID_DB_PERMISSIONS" xml:space="preserve">
+    <value>You do not have sufficient permissions</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_TOO_LONG" xml:space="preserve">
+    <value>The password must not contain more than {0} characters</value>
+  </data>
+  <data name="WIZ_DB_ENTER_EXISTS_PASSWORD" xml:space="preserve">
+    <value>The password must contain at least 8 and not more than 80 characters</value>
+  </data>
+  <data name="I_ITA_SERVER_RESTART_WARNING" xml:space="preserve">
+    <value>Launching Wizard will restart the management server. Do you Want To Continue?</value>
+  </data>
+  <data name="E_ITA_UPDATE_INVALID_SCRIPT" xml:space="preserve">
+    <value>Failed to read the database upgrade script resource.</value>
+  </data>
+  <data name="E_ITA_DB_HAS_OLD_VERSION" xml:space="preserve">
+    <value>Current database version {0} is not supported by the server. The required version is {1}.</value>
+  </data>
+  <data name="E_ITA_UPDATE_INVALID_DATABASE" xml:space="preserve">
+    <value>Unable to determine the version of the database. The database has an incorrect structure.</value>
+  </data>
+  <data name="E_ITA_UPDATE_UNKNOWN_VERSION" xml:space="preserve">
+    <value>Unable to determine the version of the database.</value>
+  </data>
+  <data name="E_ITA_UPDATE_OLD_VERSION" xml:space="preserve">
+    <value>Current version {0} cannot be updated. The minimum supported version is {1}.</value>
+  </data>
+  <data name="E_ITA_UPDATE_UNSUPPORTED_VERSION" xml:space="preserve">
+    <value>Upgrading your current version of the database is not supported.</value>
+  </data>
+  <data name="E_ITA_UPDATE_UNSUPPORTED_ACTION" xml:space="preserve">
+    <value>Unsupported type of update activity.</value>
+  </data>
+  <data name="E_ITA_UPDATE_NO_CUSTOM_STEP" xml:space="preserve">
+    <value>Does not implement interface ICustomUpdateStep.</value>
+  </data>
+  <data name="I_ITA_FINISHED" xml:space="preserve">
+    <value>Successfully completed</value>
+  </data>
+  <data name="E_ITA_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="E_ITA_UPDATE_FATAL_ERROR" xml:space="preserve">
+    <value>Fatal error when upgrading a database.</value>
+  </data>
+  <data name="E_ITA_FINISHED_WITH_ERRORS" xml:space="preserve">
+    <value>Completed with errors</value>
+  </data>
+  <data name="I_ITA_RESULT_WAIT" xml:space="preserve">
+    <value>Waiting for the result ...</value>
+  </data>
+  <data name="I_ITA_DATABASE_IS_ACTUAL" xml:space="preserve">
+    <value>The database is up-to-date</value>
+  </data>
+  <data name="I_ITA_DATABASE_IS_NOT_ACTUAL" xml:space="preserve">
+    <value>You must upgrade the database</value>
+  </data>
+  <data name="E_ITA_DATABASE_IS_UNAVAILABLE" xml:space="preserve">
+    <value>The database is unavailable or has unsupported version</value>
+  </data>
+  <data name="E_ITA_DATABASE_VERSION_ERROR" xml:space="preserve">
+    <value>An error has occurred while validating the database</value>
+  </data>
+  <data name="E_ITA_USER_ACCESS_ERROR" xml:space="preserve">
+    <value>User rights validation error</value>
+  </data>
+  <data name="I_ITA_THANKS" xml:space="preserve">
+    <value>Thank you!</value>
+  </data>
+  <data name="I_ITA_DATABASE_WELCOME" xml:space="preserve">
+    <value>Welcome to the database connection Wizard</value>
+  </data>
+  <data name="I_ITA_DATABASE_INFO" xml:space="preserve">
+    <value>This wizard helps you configure a connection to a new or existing database server.</value>
+  </data>
+  <data name="E_ITA_DATABASE_VALIDATION_FAILED" xml:space="preserve">
+    <value>An error occurred while determining the type of database server</value>
+  </data>
+  <data name="E_ITA_DATABASE_UNKNOWN_USER" xml:space="preserve">
+    <value>Error occurred while looking up the user's SID</value>
+  </data>
+  <data name="E_DBWIZARD_LIST_DB_ERROR" xml:space="preserve">
+    <value>Failed to retrieve list of databases and users from a database server.</value>
+  </data>
+  <data name="E_ITA_INITIAL_WIZARD_DATABASE_UPDATE_ERROR" xml:space="preserve">
+    <value>Fatal error when upgrading a database.</value>
+  </data>
+  <data name="E_DBWIZARD_DATABASE_SETUP_FAILED" xml:space="preserve">
+    <value>Error creating database.</value>
+  </data>
+  <data name="I_SERVER_STATUS_RUNNING_BALLOON" xml:space="preserve">
+    <value>The server is running.</value>
+  </data>
+  <data name="E_DBWIZARD_ERROR" xml:space="preserve">
+    <value>Wizard database connection settings internal error.</value>
+  </data>
+  <data name="E_DBWIZARD_LIST_SERVERS" xml:space="preserve">
+    <value>Error getting list of available database servers.</value>
+  </data>
+  <data name="E_ITA_UNHANDLED_EXCEPTION" xml:space="preserve">
+    <value>An unexpected error occurred.</value>
+  </data>
+  <data name="E_ITA_OPEN_EVENTLOG" xml:space="preserve">
+    <value>Unable to open the event log.</value>
+  </data>
+  <data name="IDS_WIZ_SRV_ORACLE_NOT_FOUND" xml:space="preserve">
+    <value>Unable to initialize Oracle Data Provider for .NET.
+It is either not installed or not properly configured.</value>
+  </data>
+  <data name="WIZ_SRV_DB_PROVIDER_IS_NOT_AVAILABLE" xml:space="preserve">
+    <value>The selected database provider ({0}) is not available. Select a different provider type.</value>
+  </data>
+  <data name="WIZ_SELECT_DB_WIN_AUTH_SERVER_CAPTION" xml:space="preserve">
+    <value>Checking Windows authentication for database server.</value>
+  </data>
+  <data name="WIZ_SELECT_DB_WIN_AUTH_SERVER_MESSAGE" xml:space="preserve">
+    <value>Wizard successfully checked database availability for user '{0}'.
+If the configuration is made for a service running under a different account, 
+you may need to manually grant access to the database for the service account.
+</value>
+  </data>
+  <data name="WIZ_SUCCESS_UPDATE" xml:space="preserve">
+    <value>Database successfully upgrated to version {0}</value>
+  </data>
+  <data name="WIZ_DB_DOESNT_NEED_UPDATE" xml:space="preserve">
+    <value>Database does not need to be upgrated.</value>
+  </data>
+  <data name="WIZ_USAGE_MESSAGE_TEMPLATE" xml:space="preserve">
+    <value>Example usage:
+{0} [[[/&lt;key&gt;=&lt;value&gt;] /&lt;key&gt;=&lt;value&gt;] ...]
+
+&lt;key&gt;and &lt;value&gt;, where it is:
+	UnattendedMode-Specifies whether to run wizard in unattended mode. Its values: true, false. Default value: false. If false or omitted, then the deployment wizard will be initialized by the rest of the passed values. If true, the deployment wizard will be launched in unattended mode.
+
+DbProviderType-provider type in the database. Its values: {1}. default value: {2}
+
+Settings common to all providers of DB:
+
+ServerName-the name of the database server. Default value is undefined.
+	ServerLogin-the user name for the administrative connection. Default value is undefined.
+	ServerPassword-user password for the administrative connection. Default value is undefined.
+	DatabaseName is the name of the database. Default value is undefined.
+	DatabaseLogin-the user name to connect to the database. Default value is undefined.
+	-DatabasePassword password to connect to the database. Default value is undefined.
+	CreateNewDatabase is a sign of the need to create a new database. Its values: true, false. Default value: false.
+	CreateNewDatabaseLogin-sign of the need to create a new database user. Its values: true, false. Default value: false.
+	ConnectionString-storoka connect to the database. Default value is undefined. If the value is set, it will be used as the current configuration.
+
+Settings for DB provider type {3}
+
+ServerCredentialType-type administrative connection to a SQL Server database. Its values: {4}. default value: {5}
+	DatabaseCredentialType-type of user connection to a SQL Server database. Its values: {6}. default value: {7}
+
+Settings for DB provider type {8}
+
+ServerDatabasePort-the port number that is used to connect to an Oracle database. Its values are: 0-65535. The default value is 1521.
+	ServerDatabaseSID-SID of the Oracle database. Default value is undefined.
+
+Sample run in mode avtorazvertyvaniâ:
+{9}/UnattendedMode = true/DbProviderType = MSSQL:/ServerName .\sqlexpress/ServerCredentialType = NT/CreateNewDatabase = true/DatabaseName = DemoWizardDb&lt;/value&gt; &lt;/key&gt; /DatabaseCredentialType&lt;/value&gt; = NT&lt;/key&gt; &lt;/value&gt; &lt;/key&gt;</value>
+  </data>
+  <data name="WIZ_PARAMETER_VALIDATION_ERROR" xml:space="preserve">
+    <value>Parameter ' {0} ' is not specified.</value>
+  </data>
+  <data name="WIZ_SELECT_DB_MESSAGE" xml:space="preserve">
+    <value>Select database</value>
+  </data>
+  <data name="WIZ_SQL_SELECT_DB_AND_SETTINGS" xml:space="preserve">
+    <value>Specify the database connection settings</value>
+  </data>
+  <data name="WIZ_SQL_SELECT_DB_NAME" xml:space="preserve">
+    <value>Specify the database name</value>
+  </data>
+  <data name="WIZ_SQL_PASSWORD" xml:space="preserve">
+    <value>&amp;Password:</value>
+  </data>
+  <data name="WIZ_SQL_PASSWORD_CONFIRM" xml:space="preserve">
+    <value>Co&amp;nfirm password:</value>
+  </data>
+  <data name="WIZ_SQL_CONNECTION_SETTINGS" xml:space="preserve">
+    <value>Configuring Server connection to DB</value>
+  </data>
+  <data name="WIZ_SQL_AUTH_MODE" xml:space="preserve">
+    <value>Specify the authentication method</value>
+  </data>
+  <data name="WIZ_SQL_AUTH" xml:space="preserve">
+    <value>&amp;SQL Server</value>
+  </data>
+  <data name="WIZ_SQL_NT_AUTH" xml:space="preserve">
+    <value>&amp;Windows NT</value>
+  </data>
+  <data name="WIZ_SQL_USE_SSL" xml:space="preserve">
+    <value>Secure connection</value>
+  </data>
+  <data name="WIZ_SRV_SSL_FAILED" xml:space="preserve">
+    <value>Failed to establish a secure SSL-connection.</value>
+  </data>
+  <data name="WIZ_SQL_CREATE_NEW_LOGIN" xml:space="preserve">
+    <value>&amp;Create a new login</value>
+  </data>
+  <data name="WIZ_SQL_LOGIN" xml:space="preserve">
+    <value>&amp;Login:</value>
+  </data>
+  <data name="WIZ_SQL_CANNOT_VALIDATE_USER" xml:space="preserve">
+    <value>It is impossible to check permissions for ' {0} '.</value>
+  </data>
+  <data name="WIZ_SQL_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>You must enter a password</value>
+  </data>
+  <data name="WIZ_ORACLE_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>You must enter a password</value>
+  </data>
+  <data name="WIZ_ORACLE_CREATE_NEW_USER" xml:space="preserve">
+    <value>&amp;Create a new user</value>
+  </data>
+  <data name="WIZ_ORACLE_SELECT_SCHEME" xml:space="preserve">
+    <value>Select database scheme</value>
+  </data>
+  <data name="WIZ_ORACLE_USER_SETTINGS" xml:space="preserve">
+    <value>User settings</value>
+  </data>
+  <data name="WIZ_ORACLE_USER_NAME" xml:space="preserve">
+    <value>&amp;User name:</value>
+  </data>
+  <data name="WIZ_ORACLE_SELECT_USER_SETTINGS" xml:space="preserve">
+    <value>Specify the user settings that will be used to connect to the database</value>
+  </data>
+  <data name="WIZ_ORACLE_SETTINGS_DESCRIPTION" xml:space="preserve">
+    <value>User supplied parameters will be used for server connection and will be assigned to the selected database</value>
+  </data>
+  <data name="WIZ_ORACLE_SET_SCHEME_NAME" xml:space="preserve">
+    <value>Please specify the name of the database schema: </value>
+  </data>
+  <data name="WIZ_ORACLE_PASSWORD_IS_NOT_PROVIDED" xml:space="preserve">
+    <value>Password is not specified</value>
+  </data>
+  <data name="WIZ_ORACLE_CONNECTION" xml:space="preserve">
+    <value>Connecting to Oracle</value>
+  </data>
+  <data name="WIZ_ORACLE_SELECT_SERVER" xml:space="preserve">
+    <value>Select the Oracle server and specify connection parameters for the administrator</value>
+  </data>
+  <data name="WIZ_ORACLE_CONNECTING" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="WIZ_ORACLE_USER_NAME_LABEL" xml:space="preserve">
+    <value>User name:</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_PORT" xml:space="preserve">
+    <value>Enter the port of the database server:</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_SID" xml:space="preserve">
+    <value>Enter the SID of the database:</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_SERVER_NAME" xml:space="preserve">
+    <value>Type the name of the server:</value>
+  </data>
+  <data name="WIZ_ORACLE_CHECK_CONNECTION" xml:space="preserve">
+    <value>&amp;Test connection</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_ADMIN_USER_NAME" xml:space="preserve">
+    <value>Specify a user with administrative rights:</value>
+  </data>
+  <data name="WIZ_ORACLE_PASSWORD" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="WIZ_SQL_SERVER_SEARCHING" xml:space="preserve">
+    <value>Searching for servers ...</value>
+  </data>
+  <data name="WIZ_SQL_SELECTING_CONNECTION_SETTINGS" xml:space="preserve">
+    <value>Select connection settings</value>
+  </data>
+  <data name="WIZ_SQL_SET_SERVER_NAME_AND_AUTH_MODE" xml:space="preserve">
+    <value>Specify the database server and its authentication</value>
+  </data>
+  <data name="WIZ_SELECT_SERVER_NAME" xml:space="preserve">
+    <value>Specify the &amp;database server</value>
+  </data>
+  <data name="WIZ_SQL_PROVIDE_AUTH_MODE" xml:space="preserve">
+    <value>Specify the authentication method for the administrative connection:</value>
+  </data>
+  <data name="WIZ_SQL_TEST_CONNECTION" xml:space="preserve">
+    <value>&amp;Test connection</value>
+  </data>
+  <data name="WIZ_SQL_CONFIGURING_ADMIIN_CONNECTION" xml:space="preserve">
+    <value>Configuring administrative connection</value>
+  </data>
+  <data name="WIZ_SQL_PRESS_FOR_UPDATING_SERVER_LIST" xml:space="preserve">
+    <value>Click to refresh the list of servers</value>
+  </data>
+  <data name="WIZ_SQL_SERVER_LIST_IS_UPDATING" xml:space="preserve">
+    <value>The list of servers is updated ...</value>
+  </data>
+  <data name="WIZ_CREATE_NEW_DB" xml:space="preserve">
+    <value>Create a new DATABASE</value>
+  </data>
+  <data name="WIZ_CONNECT_TO_EXISTING_DB" xml:space="preserve">
+    <value>Connect to an existing DATABASE</value>
+  </data>
+  <data name="WIZ_SQL_SERVER" xml:space="preserve">
+    <value>MS SQL Server</value>
+  </data>
+  <data name="WIZ_ORACLE" xml:space="preserve">
+    <value>Oracle</value>
+  </data>
+  <data name="WIZ_NT_SECURITY" xml:space="preserve">
+    <value>NT Security</value>
+  </data>
+  <data name="WIZ_PARAMETER_CONFIRMATION" xml:space="preserve">
+    <value>Confirmation settings</value>
+  </data>
+  <data name="WIZ_VALIDATE_PARAMETERS" xml:space="preserve">
+    <value>Verify parameters before performing an operation</value>
+  </data>
+  <data name="WIZ_CLICK_NEXT" xml:space="preserve">
+    <value>The wizard has collected all the necessary information to configure the database. Click "next" to start the process or the "back" to return to the settings.</value>
+  </data>
+  <data name="WIZ_CONNECTION_PARAMETERS" xml:space="preserve">
+    <value>Database connection settings</value>
+  </data>
+  <data name="WIZ_ACTION" xml:space="preserve">
+    <value>Action:</value>
+  </data>
+  <data name="WIZ_SERVER_DB" xml:space="preserve">
+    <value>Database Server:</value>
+  </data>
+  <data name="WIZ_DB_NAME" xml:space="preserve">
+    <value>Database Name:</value>
+  </data>
+  <data name="WIZ_DB_LOGIN" xml:space="preserve">
+    <value>Login DB:</value>
+  </data>
+  <data name="WIZ_PROVIDER" xml:space="preserve">
+    <value>Provider:</value>
+  </data>
+  <data name="WIZ_PRODUCT_CONFIGURATION" xml:space="preserve">
+    <value>Product configuration</value>
+  </data>
+  <data name="WIZ_CONFIG_VALIDATION" xml:space="preserve">
+    <value>Checking current configuration</value>
+  </data>
+  <data name="WIZ_DB_VALIDATION" xml:space="preserve">
+    <value>Checking existing database</value>
+  </data>
+  <data name="WIZ_VALIDATION_RESULT" xml:space="preserve">
+    <value>Validation result</value>
+  </data>
+  <data name="WIZ_VALIDATION_RESULT2" xml:space="preserve">
+    <value>Test result:</value>
+  </data>
+  <data name="WIZ_DB_CREATING" xml:space="preserve">
+    <value>Creating a database</value>
+  </data>
+  <data name="WIZ_PERFORMING_OPERATION" xml:space="preserve">
+    <value>Performing operation</value>
+  </data>
+  <data name="WIZ_CREATING_AND_CONFIGURATING" xml:space="preserve">
+    <value>You create and configure the server database.</value>
+  </data>
+  <data name="WIZ_CONFIGURATION_SELECTING" xml:space="preserve">
+    <value>Select configuration</value>
+  </data>
+  <data name="WIZ_SELECTING_CONFIGURATION_MODE" xml:space="preserve">
+    <value>Select using mode of an existing configuration</value>
+  </data>
+  <data name="WIZ_USING_EXISTING_CONFIG" xml:space="preserve">
+    <value>Use an existing configuration</value>
+  </data>
+  <data name="WIZ_CREATE_NEW_CONFIG" xml:space="preserve">
+    <value>Create a new configuration</value>
+  </data>
+  <data name="WIZ_SELECT_CONFIG_USING_MODE" xml:space="preserve">
+    <value>Select use an existing configuration.</value>
+  </data>
+  <data name="WIZ_USING_EXISTING_CONFIG_DESCRIPTION" xml:space="preserve">
+    <value>The wizard will use an existing configuration to connect to DB</value>
+  </data>
+  <data name="WIZ_NEW_CONFIG_DESCRIPTION" xml:space="preserve">
+    <value>The wizard will create a new DB configuration</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE" xml:space="preserve">
+    <value>Mode selection wizard</value>
+  </data>
+  <data name="WIZ_WIZARD_MODE_DESCRIPTION" xml:space="preserve">
+    <value>Select the database connection mode</value>
+  </data>
+  <data name="WIZ_CREATE_NEW_DB_MODE" xml:space="preserve">
+    <value>Create a new database &amp;</value>
+  </data>
+  <data name="WIZ_CONNECT_TO_DB_MODE" xml:space="preserve">
+    <value>Connect to existing database</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE_DESC1" xml:space="preserve">
+    <value>Specify the Wizard mode  - create a new database or connect to existing database.</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE_DESC2" xml:space="preserve">
+    <value>The wizard will gather the necessary information, create a new database, initialize it and configure the product to use.</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE_DESC3" xml:space="preserve">
+    <value>The wizard allows you to configure the product to use an existing database.</value>
+  </data>
+  <data name="WIZ_DB_PROVIDER" xml:space="preserve">
+    <value>Database provider</value>
+  </data>
+  <data name="WIZ_SELECT_DB_PROVIDER" xml:space="preserve">
+    <value>Select the database provider</value>
+  </data>
+  <data name="WIZ_CONFIG_PARAMETERS_HAVE_ERRORS" xml:space="preserve">
+    <value>Initialization parameters contain errors:</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_STARTED" xml:space="preserve">
+    <value>Automode is  launched ...</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_COMPLETED" xml:space="preserve">
+    <value>Automode is completed.</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_ERROR" xml:space="preserve">
+    <value>Error of automode:</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_INIT_ERROR" xml:space="preserve">
+    <value>An error occurred reading initialization parameters:</value>
+  </data>
+  <data name="WIZ_NO_UPDATE_RULES" xml:space="preserve">
+    <value>There is no list of rules that update the database. Download the rules by using the LoadRules method.</value>
+  </data>
+  <data name="WIZ_BACKUP" xml:space="preserve">
+    <value>Backing up a database</value>
+  </data>
+  <data name="WIZ_NEED_BACKUP" xml:space="preserve">
+    <value>You must back up the existing database</value>
+  </data>
+  <data name="WIZ_NEED_BACKUP_MESSAGE" xml:space="preserve">
+    <value>Before you upgrade the database, be sure to
+back up your existing version of the database.</value>
+  </data>
+  <data name="WIZ_BACKUP_CONFIRM" xml:space="preserve">
+    <value>Confirm that before updating the database
+has been backed up</value>
+  </data>
+  <data name="WIZ_CONFIRM_BACKUP_IS_ACTUAL" xml:space="preserve">
+    <value>Confirm that a backup copy is relevant</value>
+  </data>
+  <data name="WIZ_DB_UPDATING" xml:space="preserve">
+    <value>Updating the database</value>
+  </data>
+  <data name="WIZ_DB_IS_UPDATED" xml:space="preserve">
+    <value>The database was successfully updated</value>
+  </data>
+  <data name="WIZ_DB_IS_UPDATED_TO_VERSION" xml:space="preserve">
+    <value>The database was successfully updated to version:</value>
+  </data>
+  <data name="WIZ_DB_NEED_TO_BE_UPDATED" xml:space="preserve">
+    <value>To continue the server configuration the selected database needs to be updated to the next version:</value>
+  </data>
+  <data name="WIZ_DB_VERSION_CURRENT" xml:space="preserve">
+    <value>Version of the current database:</value>
+  </data>
+  <data name="WIZ_DB_VERSION_ACTUAL" xml:space="preserve">
+    <value>Version required for work:</value>
+  </data>
+  <data name="WIZ_NEED_BACKUP_DESCRIPTION" xml:space="preserve">
+    <value>Before you upgrade the database, be sure to
+back up your existing version of the database.</value>
+  </data>
+  <data name="WIZ_DB_CURRENT_NAME" xml:space="preserve">
+    <value>The name of the current database:</value>
+  </data>
+  <data name="WIZ_WAIT_UPDATING_COMPLETE" xml:space="preserve">
+    <value>Please wait while database updates</value>
+  </data>
+  <data name="WIZ_UPDATING_PROGRESS" xml:space="preserve">
+    <value>Execution progress:</value>
+  </data>
+  <data name="WIZ_DB_TITLE" xml:space="preserve">
+    <value>Database wizard</value>
+  </data>
+  <data name="WIZ_MYSQL" xml:space="preserve">
+    <value>MySql</value>
+  </data>
+  <data name="WIZ_MYSQL_CHECK_CONNECTION" xml:space="preserve">
+    <value>&amp;Test connection</value>
+  </data>
+  <data name="WIZ_MYSQL_CONNECTING" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="WIZ_MYSQL_CONNECTION" xml:space="preserve">
+    <value>Connecting to MySql</value>
+  </data>
+  <data name="WIZ_MYSQL_CREATE_NEW_USER" xml:space="preserve">
+    <value>&amp;Create a new user</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_ADMIN_USER_NAME" xml:space="preserve">
+    <value>Specify a user with administrative rights:</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_PORT" xml:space="preserve">
+    <value>Enter the port of the database server:</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_SERVER_NAME" xml:space="preserve">
+    <value>Type the name of the server:</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_SID" xml:space="preserve">
+    <value>Enter the SID of the database:</value>
+  </data>
+  <data name="WIZ_MYSQL_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>You must enter a password</value>
+  </data>
+  <data name="WIZ_MYSQL_PASSWORD" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="WIZ_MYSQL_PASSWORD_IS_NOT_PROVIDED" xml:space="preserve">
+    <value>Password is not specified</value>
+  </data>
+  <data name="WIZ_MYSQL_SELECT_SCHEME" xml:space="preserve">
+    <value>Select database scheme</value>
+  </data>
+  <data name="WIZ_MYSQL_SELECT_SERVER" xml:space="preserve">
+    <value>Select the MySql server and specify connection parameters for the administrator</value>
+  </data>
+  <data name="WIZ_MYSQL_SELECT_USER_SETTINGS" xml:space="preserve">
+    <value>Specify the user settings that will be used to connect to the database</value>
+  </data>
+  <data name="WIZ_MYSQL_SETTINGS_DESCRIPTION" xml:space="preserve">
+    <value>User supplied parameters will be used for server connection and will be assigned to the selected database</value>
+  </data>
+  <data name="WIZ_MYSQL_SET_SCHEME_NAME" xml:space="preserve">
+    <value>Please specify the name of the database schema: </value>
+  </data>
+  <data name="WIZ_MYSQL_USER_NAME" xml:space="preserve">
+    <value>&amp;User name:</value>
+  </data>
+  <data name="WIZ_MYSQL_USER_NAME_LABEL" xml:space="preserve">
+    <value>User name:</value>
+  </data>
+  <data name="WIZ_MYSQL_USER_SETTINGS" xml:space="preserve">
+    <value>User settings</value>
+  </data>
+  <data name="WIZ_SRV_NO_CREATE_DB_PERMISSION" xml:space="preserve">
+    <value>The selected user has no administrative rights that is required to create the database. Grant the user 'CREATE ANY DATABASE' permission.</value>
+  </data>
+  <data name="WIZ_SRV_NO_CREATE_LOGIN_PERMISSION" xml:space="preserve">
+    <value>The selected user has no administrative rights that is required to create the SQL Server login. Grant the user 'ALTER ANY LOGIN' permission.</value>
+  </data>
+  <data name="WIZ_AZURE_SQL" xml:space="preserve">
+    <value>Azure SQL</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CHECK_CONNECTION" xml:space="preserve">
+    <value>&amp;Test connection</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CONNECTING" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CONNECTION" xml:space="preserve">
+    <value>Connecting to Azure SQL</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CREATE_NEW_USER" xml:space="preserve">
+    <value>&amp;Create a new user</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_ENTER_DB_NAME" xml:space="preserve">
+    <value>Database name:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_ENTER_SERVER_NAME" xml:space="preserve">
+    <value>Server name:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_ENTER_SID" xml:space="preserve">
+    <value>Enter the SID of the database:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>You must enter a password</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_PASSWORD" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_PASSWORD_IS_NOT_PROVIDED" xml:space="preserve">
+    <value>Password is not specified</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SELECT_SCHEME" xml:space="preserve">
+    <value>Select database scheme</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SELECT_SERVER" xml:space="preserve">
+    <value>Select the Azure SQL server and specify connection parameters for the administrator</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SELECT_USER_SETTINGS" xml:space="preserve">
+    <value>Specify the user settings that will be used to connect to the database</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SETTINGS_DESCRIPTION" xml:space="preserve">
+    <value>User supplied parameters will be used for server connection and will be assigned to the selected database</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SET_SCHEME_NAME" xml:space="preserve">
+    <value>Please specify the name of the database schema: </value>
+  </data>
+  <data name="WIZ_AZURE_SQL_USER_NAME" xml:space="preserve">
+    <value>&amp;User name:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_USER_NAME_LABEL" xml:space="preserve">
+    <value>User name:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_USER_SETTINGS" xml:space="preserve">
+    <value>User settings</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_DENY_FOR_DB_CREATION" xml:space="preserve">
+    <value>The database contains data. New database creation is denied.</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CREDENTIAL_TYPE_NOT_SUPPORTED" xml:space="preserve">
+    <value>Database credentials type '{0}' is not supported.</value>
+  </data>
+</root>

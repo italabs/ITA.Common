@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\OUTPUT\TestHostApp\Bin\Debug\AnyCPU\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\OUTPUT\TestHostApp\Bin\Release\AnyCPU\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.1.0-preview.19073.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ITA.Common.Host.Windows\ITA.Common.Host.Windows.csproj" />
+    <ProjectReference Include="..\..\ITA.Common.Host\ITA.Common.Host.csproj" />
+    <ProjectReference Include="..\..\ITA.Common\ITA.Common.csproj" />
+    <ProjectReference Include="..\TestHostApp.BusinessComponent\TestHostApp.BusinessComponent.csproj" />
+    <ProjectReference Include="..\TestHostApp.Common\TestHostApp.Common.csproj" />
+    <ProjectReference Include="..\TestHostApp.DummyHost\TestHostApp.DummyHost.csproj" />
+    <ProjectReference Include="..\TestHostApp.Interfaces\TestHostApp.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AppSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="HostConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
+  
+</Project>

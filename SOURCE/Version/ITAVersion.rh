@@ -1,0 +1,45 @@
+
+#include "VersionDefs.rh"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+VS_VERSION_INFO     VERSIONINFO
+  FILEVERSION		FILE_VERSION_BIN
+  PRODUCTVERSION    PRODUCT_VERSION_BIN
+ FILEFLAGSMASK 0x3fL
+
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+	BLOCK "040904B0"
+        BEGIN 
+			VALUE "CompanyName",      COMPANY_NAME "\0"
+			VALUE "FileDescription",  ITA_FILE_DESCRIPTION "\0"
+			VALUE "FileVersion",      FILE_VERSION "\0"
+			VALUE "InternalName",     ITA_INTERNAL_NAME "\0"
+			VALUE "LegalCopyright",   COMPANY_COPYRIGHT "\0"
+			VALUE "LegalTrademarks",  COMPANY_TRADEMARK "\0"
+			VALUE "OriginalFilename", ITA_ORIGINAL_FILE_NAME "\0"
+			VALUE "ProductName",      PRODUCT_NAME "\0"
+			VALUE "ProductVersion",   PRODUCT_VERSION "\0"
+        END
+    END
+    BLOCK "VarFileInfo" 
+    BEGIN 
+            VALUE "Translation", 0x409, 1200
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////

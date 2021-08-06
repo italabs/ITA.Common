@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="upgrade" msprop:Generator_UserTableName="upgrade" msprop:Generator_RowDeletedName="upgradeRowDeleted" msprop:Generator_TableClassName="upgradeDataTable" msprop:Generator_RowChangedName="upgradeRowChanged" msprop:Generator_RowClassName="upgradeRow" msprop:Generator_RowChangingName="upgradeRowChanging" msprop:Generator_RowEvArgName="upgradeRowChangeEvent" msprop:Generator_RowEvHandlerName="upgradeRowChangeEventHandler" msprop:Generator_TablePropName="upgrade" msprop:Generator_TableVarName="tableupgrade" msprop:Generator_RowDeletingName="upgradeRowDeleting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="steps" msprop:Generator_UserTableName="steps" msprop:Generator_RowDeletedName="stepsRowDeleted" msprop:Generator_TableClassName="stepsDataTable" msprop:Generator_RowChangedName="stepsRowChanged" msprop:Generator_RowClassName="stepsRow" msprop:Generator_RowChangingName="stepsRowChanging" msprop:Generator_RowEvArgName="stepsRowChangeEvent" msprop:Generator_RowEvHandlerName="stepsRowChangeEventHandler" msprop:Generator_TablePropName="steps" msprop:Generator_TableVarName="tablesteps" msprop:Generator_RowDeletingName="stepsRowDeleting" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="step" msprop:Generator_UserTableName="step" msprop:Generator_RowDeletedName="stepRowDeleted" msprop:Generator_TableClassName="stepDataTable" msprop:Generator_RowChangedName="stepRowChanged" msprop:Generator_RowClassName="stepRow" msprop:Generator_RowChangingName="stepRowChanging" msprop:Generator_RowEvArgName="stepRowChangeEvent" msprop:Generator_RowEvHandlerName="stepRowChangeEventHandler" msprop:Generator_TablePropName="step" msprop:Generator_TableVarName="tablestep" msprop:Generator_RowDeletingName="stepRowDeleting" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:string" />
+                  <xs:attribute name="from" msprop:Generator_UserColumnName="from" msprop:Generator_ColumnPropNameInRow="from" msprop:Generator_ColumnVarNameInTable="columnfrom" msprop:Generator_ColumnPropNameInTable="fromColumn" type="xs:string" />
+                  <xs:attribute name="type" msprop:Generator_UserColumnName="type" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInTable="typeColumn" type="xs:string" />
+                  <xs:attribute name="source" msprop:Generator_UserColumnName="source" msprop:Generator_ColumnPropNameInRow="source" msprop:Generator_ColumnVarNameInTable="columnsource" msprop:Generator_ColumnPropNameInTable="sourceColumn" type="xs:string" />
+                  <xs:attribute name="description" msprop:Generator_UserColumnName="description" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInTable="descriptionColumn" type="xs:string" use="required" />
+                  <xs:attribute name="complexity" msprop:Generator_UserColumnName="complexity" msprop:Generator_ColumnPropNameInRow="complexity" msprop:Generator_ColumnVarNameInTable="columncomplexity" msprop:Generator_ColumnPropNameInTable="complexityColumn" type="xs:string" />
+                  <xs:attribute name="timeout" msprop:Generator_UserColumnName="timeout" msprop:Generator_ColumnPropNameInRow="timeout" msprop:Generator_ColumnVarNameInTable="columntimeout" msprop:Generator_ColumnPropNameInTable="timeoutColumn" type="xs:string" />
+                  <xs:attribute name="to" msprop:Generator_UserColumnName="to" msprop:Generator_ColumnPropNameInRow="to" msprop:Generator_ColumnVarNameInTable="columnto" msprop:Generator_ColumnPropNameInTable="toColumn" type="xs:string" />
+                  <xs:attribute name="steps_Id" msprop:Generator_UserColumnName="steps_Id" msprop:Generator_ColumnPropNameInRow="steps_Id" msprop:Generator_ColumnVarNameInTable="columnsteps_Id" msprop:Generator_ColumnPropNameInTable="steps_IdColumn" type="xs:int" use="prohibited" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="steps_Id" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="steps_Id" msprop:Generator_ColumnPropNameInRow="steps_Id" msprop:Generator_ColumnVarNameInTable="columnsteps_Id" msprop:Generator_ColumnPropNameInTable="steps_IdColumn" type="xs:int" msdata:AllowDBNull="false" use="prohibited" />
+            <xs:attribute name="upgrade_Id" msprop:Generator_UserColumnName="upgrade_Id" msprop:Generator_ColumnPropNameInRow="upgrade_Id" msprop:Generator_ColumnVarNameInTable="columnupgrade_Id" msprop:Generator_ColumnPropNameInTable="upgrade_IdColumn" type="xs:int" use="prohibited" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="minimal" msprop:Generator_UserColumnName="minimal" msprop:Generator_ColumnPropNameInRow="minimal" msprop:Generator_ColumnVarNameInTable="columnminimal" msprop:Generator_ColumnPropNameInTable="minimalColumn" type="xs:string" />
+      <xs:attribute name="upgrade_Id" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="upgrade_Id" msprop:Generator_ColumnPropNameInRow="upgrade_Id" msprop:Generator_ColumnVarNameInTable="columnupgrade_Id" msprop:Generator_ColumnPropNameInTable="upgrade_IdColumn" type="xs:int" msdata:AllowDBNull="false" use="prohibited" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="NewDataSet" msprop:Generator_DataSetName="NewDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="upgrade" />
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="steps_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//steps" />
+      <xs:field xpath="@steps_Id" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//upgrade" />
+      <xs:field xpath="@upgrade_Id" />
+    </xs:unique>
+    <xs:keyref name="upgrade_steps" refer="Constraint1" msdata:IsNested="true" msprop:rel_Generator_UserRelationName="upgrade_steps" msprop:rel_Generator_RelationVarName="relationupgrade_steps" msprop:rel_Generator_UserChildTable="steps" msprop:rel_Generator_UserParentTable="upgrade" msprop:rel_Generator_ParentPropName="upgradeRow" msprop:rel_Generator_ChildPropName="GetstepsRows">
+      <xs:selector xpath=".//steps" />
+      <xs:field xpath="@upgrade_Id" />
+    </xs:keyref>
+    <xs:keyref name="steps_step" refer="steps_Constraint1" msdata:IsNested="true" msprop:rel_Generator_UserRelationName="steps_step" msprop:rel_Generator_RelationVarName="relationsteps_step" msprop:rel_Generator_UserChildTable="step" msprop:rel_Generator_UserParentTable="steps" msprop:rel_Generator_ParentPropName="stepsRow" msprop:rel_Generator_ChildPropName="GetstepRows">
+      <xs:selector xpath=".//step" />
+      <xs:field xpath="@steps_Id" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

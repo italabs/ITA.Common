@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A80DDFCB-9EF7-4EB4-AE2A-A3463DA03E6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITA.Wizards</RootNamespace>
+    <AssemblyName>ITA.Wizards</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\\SignKey\\ITA.Common.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\OUTPUT\Bin\Debug\AnyCPU\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\OUTPUT\Bin\Release\AnyCPU\</OutputPath>
+    <DefineConstants>TRACE;SkipPostSharp</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SdkProject>True</SdkProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EXTERNALS\ThirdParty\MySql\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EXTERNALS\ThirdParty\Oracle\bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseWizard\Model\AzureSqlDatabaseProvider.cs" />
+    <Compile Include="DatabaseWizard\Exceptions\AzureSqlException.cs" />
+    <Compile Include="DatabaseWizard\Model\MySqlServerDatabaseProvider.cs" />
+    <Compile Include="DatabaseWizard\Pages\ActionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Model\BaseDatabaseProvider.cs" />
+    <Compile Include="DatabaseWizard\Pages\AzureSql\SelectAzureSqlServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\CheckExistingDatabasePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\CheckExistingDatabasePage.Designer.cs">
+      <DependentUpon>CheckExistingDatabasePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseWizard\Model\DbProviderSettings.cs" />
+    <Compile Include="DatabaseWizard\Pages\MySql\SelectMySqlDB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\MySql\SelectMySqlServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\Oracle\SelectOracleDB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\Oracle\SelectOracleServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Model\OracleDatabaseProvider.cs" />
+    <Compile Include="DatabaseWizard\Pages\SelectProvider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Model\IDatabaseProvider.cs" />
+    <Compile Include="DatabaseWizard\Pages\SelectExistingConfigurationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\DatabaseWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\DatabaseWizard.Designer.cs">
+      <DependentUpon>DatabaseWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseWizard\Model\DatabaseWizardContext.cs" />
+    <Compile Include="DatabaseWizard\Pages\ProgressPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Model\ScriptHelper.cs" />
+    <Compile Include="DatabaseWizard\Pages\SqlServer\SelectMSSQLDB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\SelectOperationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\SqlServer\SelectMSSQLServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Model\ServerEnum.cs" />
+    <Compile Include="DatabaseWizard\Model\SqlServerDatabaseProvider.cs" />
+    <Compile Include="DatabaseWizard\Controls\TextBoxWithValidator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseWizard\Controls\TextBoxWithValidator.designer.cs">
+      <DependentUpon>TextBoxWithValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseWizard\Pages\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRules.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateRules.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWizard\ConfirmBackupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateWizard\ConfirmBackupPage.Designer.cs">
+      <DependentUpon>ConfirmBackupPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWizard\ConfirmUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateWizard\ConfirmUpdate.Designer.cs">
+      <DependentUpon>ConfirmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWizard\Model\ICustomUpdateStep.cs" />
+    <Compile Include="UpdateWizard\Model\IUpdateContext.cs" />
+    <Compile Include="UpdateWizard\Model\UpdateDatabaseWizardContext.cs" />
+    <Compile Include="UpdateWizard\Model\UpdateEvent.cs" />
+    <Compile Include="UpdateWizard\Model\UpdateManager.cs" />
+    <Compile Include="UpdateWizard\UpdateNecessityPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateWizard\UpdateNecessityPage.Designer.cs">
+      <DependentUpon>UpdateNecessityPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWizard\UpdateProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateWizard\UpdateProgress.Designer.cs">
+      <DependentUpon>UpdateProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWizard\Model\UpdateRule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseWizard\Pages\ActionPage.resx">
+      <DependentUpon>ActionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\AzureSql\SelectAzureSqlServer.resx">
+      <DependentUpon>SelectAzureSqlServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\CheckExistingDatabasePage.resx">
+      <DependentUpon>CheckExistingDatabasePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\DatabaseWizard.resx">
+      <DependentUpon>DatabaseWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\MySql\SelectMySqlDB.resx">
+      <DependentUpon>SelectMySqlDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\MySql\SelectMySqlServer.resx">
+      <DependentUpon>SelectMySqlServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\ProgressPage.resx">
+      <DependentUpon>ProgressPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\SqlServer\SelectMSSQLDB.resx">
+      <DependentUpon>SelectMSSQLDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\SelectProvider.resx">
+      <DependentUpon>SelectProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\SelectOperationPage.resx">
+      <DependentUpon>SelectOperationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\SqlServer\SelectMSSQLServer.resx">
+      <DependentUpon>SelectMSSQLServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Controls\TextBoxWithValidator.resx">
+      <DependentUpon>TextBoxWithValidator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Messages.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateWizard\ConfirmBackupPage.resx">
+      <DependentUpon>ConfirmBackupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateWizard\ConfirmUpdate.resx">
+      <DependentUpon>ConfirmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateWizard\UpdateNecessityPage.resx">
+      <DependentUpon>UpdateNecessityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateWizard\UpdateProgress.resx">
+      <DependentUpon>UpdateProgress.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\Oracle\SelectOracleDB.resx">
+      <DependentUpon>SelectOracleDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\Oracle\SelectOracleServer.resx">
+      <DependentUpon>SelectOracleServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBInfos\MSSQL.rtf" />
+    <EmbeddedResource Include="DBInfos\Oracle.rtf" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\MSSQL\CreateDB.sql" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\Oracle\CreateDB.sql" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\Oracle\CreateUser.sql" />
+    <EmbeddedResource Include="UpdateRules.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateRules.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\Pages\SelectExistingConfigurationPage.resx">
+      <DependentUpon>SelectExistingConfigurationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\MSSQL\CreateUser.sql" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\MSSQL\GrantLoginToLocalSystem.sql" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\MSSQL\GrantLoginToDomainUser.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\MySql\CreateDB.sql" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\MySql\CreateUser.sql" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\MySql\GrantUser.sql" />
+    <EmbeddedResource Include="DBInfos\AzureSQL.rtf" />
+    <None Include="Resources\AzureSQL.png" />
+    <EmbeddedResource Include="DatabaseWizard\DbScripts\AzureSql\CreateDB.sql" />
+    <Content Include="Resources\Gear48.ico" />
+    <Content Include="Resources\HorizontalBanner.bmp" />
+    <Content Include="Resources\indicator_arrows.gif" />
+    <Content Include="Resources\indicator_arrows_static.png" />
+    <EmbeddedResource Include="DBInfos\MySQL.rtf" />
+    <None Include="Resources\HorizontalBanner.psd" />
+    <Content Include="Resources\MSSQL.png" />
+    <Content Include="Resources\MySql.png" />
+    <Content Include="Resources\Oracle.png" />
+    <Content Include="Resources\Setup_Install48.ico" />
+    <Content Include="Resources\VerticalBanner.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITA.Common\ITA.Common.csproj">
+      <Project>{9edc15ef-9cbb-404c-aa5e-b1e66f6f8f88}</Project>
+      <Name>ITA.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITA.Common.UI\ITA.Common.UI.csproj">
+      <Project>{700a79ea-0b67-4317-a99b-c83f3dc5b3e8}</Project>
+      <Name>ITA.Common.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITA.WizardFramework\ITA.WizardFramework.csproj">
+      <Project>{D9BF36F4-83E4-4DA0-90A7-1A5633E2F506}</Project>
+      <Name>ITA.WizardFramework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

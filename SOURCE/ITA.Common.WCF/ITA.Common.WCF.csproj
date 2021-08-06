@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{920CBEBA-1FBB-45A3-B4BC-192CCB3B1EB3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITA.Common.WCF</RootNamespace>
+    <AssemblyName>ITA.Common.WCF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\OUTPUT\Bin\Debug\AnyCPU\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\OUTPUT\Bin\Release\AnyCPU\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\SignKey\ITA.Common.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SdkProject>True</SdkProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\EXTERNALS\ThirdParty\Newtonsoft.Json\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindingHelper.cs" />
+    <Compile Include="BindingOptions.cs" />
+    <Compile Include="ChannelFactoryWrapper.cs" />
+    <Compile Include="CustomMessageInspector.cs" />
+    <Compile Include="ErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IWcfServiceConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteClientBase.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RESTHelp\Data\AssemblyDocumentation.cs" />
+    <Compile Include="RESTHelp\Data\ContractInformation.cs" />
+    <Compile Include="RESTHelp\Data\InformationHelper.cs" />
+    <Compile Include="RESTHelp\Data\MethodDocumentation.cs" />
+    <Compile Include="RESTHelp\Data\MethodParamDocumentation.cs" />
+    <Compile Include="RESTHelp\Data\MethodParamPlace.cs" />
+    <Compile Include="RESTHelp\Data\OperationInformation.cs" />
+    <Compile Include="RESTHelp\Data\PropertyDocumentation.cs" />
+    <Compile Include="RESTHelp\Data\TypeDocumentation.cs" />
+    <Compile Include="RESTHelp\HelpPageBehavior.cs" />
+    <Compile Include="RESTHelp\HelpPageInvoker.cs" />
+    <Compile Include="RESTHelp\Interfaces\IHelpPageSettings.cs" />
+    <Compile Include="RESTHelp\Interfaces\IUriHelper.cs" />
+    <Compile Include="RESTHelp\PassthroughMessageFormatter.cs" />
+    <Compile Include="RESTHelp\SimpleInstanceContextProvider.cs" />
+    <Compile Include="RESTHelp\SingletonInstanceProvider.cs" />
+    <Compile Include="RESTHelp\Views\BaseHelpView.cs" />
+    <Compile Include="RESTHelp\Views\FileHelpView.cs" />
+    <Compile Include="RESTHelp\HelpViewResolver.cs" />
+    <Compile Include="RESTHelp\HelpPageOfflineProvider.cs" />
+    <Compile Include="RESTHelp\Views\HtmlBaseHelpView.cs" />
+    <Compile Include="RESTHelp\Views\HtmlContractHelpView.cs" />
+    <Compile Include="RESTHelp\Views\HtmlOperationHelpView.cs" />
+    <Compile Include="RESTHelp\Interfaces\IHelpView.cs" />
+    <Compile Include="RESTHelp\Views\XmlDataHelpView.cs" />
+    <Compile Include="RESTHelp\Views\XRaw.cs" />
+    <Compile Include="SecurityType.cs" />
+    <Compile Include="ServiceHostExtensions.cs" />
+    <Compile Include="UI\ErrorMessageBox2.cs" />
+    <Compile Include="UI\ServiceExceptionDetailSource.cs" />
+    <Compile Include="WCFException.cs" />
+    <Compile Include="WcfServiceConfigBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ErrorMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorMessages.ru.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\file.gif" />
+    <Content Include="Resources\folder_closed.gif" />
+    <Content Include="Resources\folder.gif" />
+    <Content Include="Resources\jquery_3_2_1_min.js" />
+    <Content Include="Resources\jquery_treeview_css.css" />
+    <Content Include="Resources\jquery_treeview_js.js" />
+    <Content Include="Resources\scripts.js" />
+    <Content Include="Resources\styles.css" />
+    <Content Include="Resources\treeview_default_line.gif" />
+    <Content Include="Resources\treeview_default.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITA.Common\ITA.Common.csproj">
+      <Project>{9edc15ef-9cbb-404c-aa5e-b1e66f6f8f88}</Project>
+      <Name>ITA.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITA.Common.Host\ITA.Common.Host.csproj">
+      <Project>{4a81ffcd-5022-4bf2-ab9f-5ba2e895ac89}</Project>
+      <Name>ITA.Common.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITA.Common.UI\ITA.Common.UI.csproj">
+      <Project>{700a79ea-0b67-4317-a99b-c83f3dc5b3e8}</Project>
+      <Name>ITA.Common.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\Solution.Custom.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

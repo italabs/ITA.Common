@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<InstallHelperConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <InstallHelperLogPath>${APPDATA}\NetCoreTest\NetCoreTestApp\Logs</InstallHelperLogPath>
+  <InstallHelperLogFileName>InstallHelper</InstallHelperLogFileName>
+  <IsRunHostInstaller>true</IsRunHostInstaller>
+  <HostConfig>
+    <ImageName>ConsoleApp.exe</ImageName>
+    <Description>NetCore Test Service</Description>
+    <DisplayName>NetCore Test Service</DisplayName>
+    <InstanceName>default</InstanceName>
+    <ServiceName>TestNetCoreEngineSvc</ServiceName>
+    <StartAfterInstall>true</StartAfterInstall>
+    <StartTimeout>30</StartTimeout>
+    <ServicesDependedOn>
+      <string>RPCSS</string>
+      <string>Eventlog</string>
+    </ServicesDependedOn>
+    <FailureActions>
+      <SC_ACTION>
+        <Type>SC_ACTION_RESTART</Type>
+        <Delay>30</Delay>
+      </SC_ACTION>
+      <SC_ACTION>
+        <Type>SC_ACTION_RESTART</Type>
+        <Delay>30</Delay>
+      </SC_ACTION>
+      <SC_ACTION>
+        <Type>SC_ACTION_NONE</Type>
+        <Delay>30</Delay>
+      </SC_ACTION>
+    </FailureActions>
+  </HostConfig>
+  <IsRunEventLogInstaller>true</IsRunEventLogInstaller>
+  <EventLogConfig>
+    <UninstallAction>NoAction</UninstallAction>
+    <CategoryCount>10</CategoryCount>
+    <CategoryResourceFile>%CommonProgramFiles%\Rosohrana Shared\SDMS Server\Eventlog\Rosohrana.SDMS.EventlogCategories.dll</CategoryResourceFile>
+    <MessageResourceFile>%CommonProgramFiles%\Rosohrana Shared\Eventlog\ITA.Common.EventlogMessages.dll</MessageResourceFile>
+    <Log>TestNetCore Engine</Log>
+    <Source>TestNetCore Engine</Source>
+    <DisplayNameResourceFile>%CommonProgramFiles%\Rosohrana Shared\SDMS Server\Eventlog\Rosohrana.SDMS.EventlogCategories.dll</DisplayNameResourceFile>
+    <DisplayNameResourceId>1000</DisplayNameResourceId>
+    <OverFlowAction>OverwriteAsNeeded</OverFlowAction>
+    <MaximumKilobytes>1024</MaximumKilobytes>
+  </EventLogConfig>
+  <PerfCounterCategoryPrefix>TestNetCore Engine</PerfCounterCategoryPrefix>
+  <TypesForPerfCounter>
+    <string>DummyHost.DummyHostCounterObject, DummyHost</string>
+  </TypesForPerfCounter>
+</InstallHelperConfig>

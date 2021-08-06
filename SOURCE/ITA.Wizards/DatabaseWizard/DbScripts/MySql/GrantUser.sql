@@ -1,0 +1,3 @@
+﻿USE @DB;
+
+GRANT ALL PRIVILEGES ON @DB.* TO '@login'@'%' WITH GRANT OPTION;

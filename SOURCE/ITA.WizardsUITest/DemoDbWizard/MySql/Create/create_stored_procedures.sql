@@ -1,0 +1,1 @@
+﻿create table ce(c int, e int);

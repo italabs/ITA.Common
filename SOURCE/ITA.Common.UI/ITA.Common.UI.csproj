@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{700A79EA-0B67-4317-A99B-C83F3DC5B3E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITA.Common.UI</RootNamespace>
+    <AssemblyName>ITA.Common.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\OUTPUT\Bin\Debug\AnyCPU\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\OUTPUT\Bin\Release\AnyCPU\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\SignKey\ITA.Common.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SdkProject>True</SdkProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <PackageReference Include="Fody" Version="6.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="ITA.MethodDecorator.Fody" Version="3.0.2">
+      <IncludeAssets>all</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceDetection\DefaultDetector\DefaultDetector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceDetection\DeviceDetector.cs" />
+    <Compile Include="DeviceDetection\SmartDetector\CardState.cs" />
+    <Compile Include="DeviceDetection\SmartDetector\ReaderState.cs" />
+    <Compile Include="DeviceDetection\SmartDetector\SmartcardContextSafeHandle.cs" />
+    <Compile Include="DeviceDetection\SmartDetector\SmartcardDetector.cs" />
+    <Compile Include="DeviceDetection\SmartDetector\SmartcardErrorCode.cs" />
+    <Compile Include="DeviceDetection\SmartDetector\UnsafeNativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BriefErrorDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BriefErrorDescription.Designer.cs">
+      <DependentUpon>BriefErrorDescription.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\EPictureType.cs" />
+    <Compile Include="UI\ErrorMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ErrorMessageBox.Designer.cs">
+      <DependentUpon>ErrorMessageBox.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\ExceptionViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExceptionViewForm.Designer.cs">
+      <DependentUpon>ExceptionViewForm.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\FolderSelectDialog.cs" />
+    <Compile Include="UI\LanguageIndicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LanguageIndicator.Designer.cs">
+      <DependentUpon>LanguageIndicator.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\OnGUIThreadAttribute.cs" />
+    <Compile Include="UI\Reflector.cs" />
+    <Compile Include="UI\RichMessageBox.cs" />
+    <Compile Include="UI\SPIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BriefErrorDescription.resx">
+      <DependentUpon>BriefErrorDescription.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BriefErrorDescription.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BriefErrorDescription.ru.resx">
+      <DependentUpon>BriefErrorDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ErrorMessageBox.resx">
+      <DependentUpon>ErrorMessageBox.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessageBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ErrorMessageBox.ru.resx">
+      <DependentUpon>ErrorMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExceptionViewForm.resx">
+      <DependentUpon>ExceptionViewForm.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionViewForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExceptionViewForm.ru.resx">
+      <DependentUpon>ExceptionViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LanguageIndicator.resx">
+      <DependentUpon>LanguageIndicator.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LanguageIndicator.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITA.Common\ITA.Common.csproj">
+      <Project>{9edc15ef-9cbb-404c-aa5e-b1e66f6f8f88}</Project>
+      <Name>ITA.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownDetails.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownDetailsFocused.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopBackground.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpDetails.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpDetailsFocused.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

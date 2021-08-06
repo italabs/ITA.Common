@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<upgrade minimal="1.0.0.0">
+  <steps>
+    <step id="10" from="1.0.0.0" type="sql" source="add_custom_roles.sql" description="Добавление произвольных ролей" complexity="1" timeout="10000" />
+    <step id="20" from="1.0.0.110" type="sql" source="add_cryptosettings.sql" description="Добавление дополнительных параметров криптонастроек" complexity="1" />
+    <step id="30" from="1.5.1.0" to="1.5.1.1" type="sql" source="add_recovery_agent_role.sql" description="Добавление поддержки восстановления системных разделов" complexity="1" />
+    <step id="40" from="1.5.1.1" to="1.5.1.2" type="net" source="ITA.WizardsUITest.DemoDbWizard.NET.DemoUpdateStep, ITA.WizardsUITest" description="Выполнение .NET-кода" complexity="1" />
+  </steps>
+</upgrade>

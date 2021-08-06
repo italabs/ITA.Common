@@ -1,0 +1,1 @@
+﻿create table abc (a int, b int, c int);

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<InstallHelperConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <InstallHelperLogPath>${APPDATA}\ITA\Common\Logs</InstallHelperLogPath>
+  <InstallHelperLogFileName>InstallHelper</InstallHelperLogFileName>
+  <IsRunHostInstaller>true</IsRunHostInstaller>
+  <HostConfig>
+    <ImageName>My.Service.exe</ImageName>
+    <Description>Service Description</Description>
+    <DisplayName>My Cool Service</DisplayName>
+    <InstanceName>default</InstanceName>
+    <ServiceName>My_svc</ServiceName>
+    <StartAfterInstall>true</StartAfterInstall>
+    <StartTimeout>30</StartTimeout>
+    <StartType>Automatic</StartType>
+    <ServicesDependedOn>
+      <string>systemService01</string>
+      <string>systemService02</string>
+    </ServicesDependedOn>
+    <FailureActions>
+      <SC_ACTION>
+        <Type>SC_ACTION_RESTART</Type>
+        <Delay>30</Delay>
+      </SC_ACTION>
+      <SC_ACTION>
+        <Type>SC_ACTION_RESTART</Type>
+        <Delay>30</Delay>
+      </SC_ACTION>
+      <SC_ACTION>
+        <Type>SC_ACTION_NONE</Type>
+        <Delay>30</Delay>
+      </SC_ACTION>
+    </FailureActions>
+  </HostConfig>
+  <IsRunEventLogInstaller>true</IsRunEventLogInstaller>
+  <EventLogConfig>
+    <UninstallAction>NoAction</UninstallAction>
+    <CategoryCount>10</CategoryCount>
+    <CategoryResourceFile>EventlogCategory.dll</CategoryResourceFile>
+    <MessageResourceFile>EventlogMessages.dll</MessageResourceFile>
+    <Log>ITA Common Engine Log</Log>
+    <Source>ITA Common Component</Source>
+    <DisplayNameResourceFile>EventlogDisplayName.dll</DisplayNameResourceFile>
+    <DisplayNameResourceId>10</DisplayNameResourceId>
+    <OverFlowAction>OverwriteAsNeeded</OverFlowAction>
+    <MaximumKilobytes>102400</MaximumKilobytes>
+    <RetentionDays>14</RetentionDays>
+  </EventLogConfig>
+  <PerfCounterCategoryPrefix>My Cool App</PerfCounterCategoryPrefix>
+  <TypesForPerfCounter>
+    <string>ConsoleApplication2.Program, ConsoleApplication2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</string>
+  </TypesForPerfCounter>
+</InstallHelperConfig>

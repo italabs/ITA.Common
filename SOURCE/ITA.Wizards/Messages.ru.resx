@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WIZ_SRV_LOGIN_SUCCEEDED" xml:space="preserve">
+    <value>Соединение с сервером успешно установлено.</value>
+  </data>
+  <data name="WIZ_SRV_ORACLE_NOT_FOUND" xml:space="preserve">
+    <value>Unable to initialize Oracle Data Provider for .NET.
+It is either not installed or not properly configured.</value>
+  </data>
+  <data name="WIZ_DB_ENTER_USER" xml:space="preserve">
+    <value>Не указан логин пользователя</value>
+  </data>
+  <data name="WIZ_AD_SID_IS_NULL" xml:space="preserve">
+    <value>Текущий пользователь не определен</value>
+  </data>
+  <data name="WIZ_AD_SELECT_CONTAINER" xml:space="preserve">
+    <value>Необходимо выбрать объект-контейнер Active Directory</value>
+  </data>
+  <data name="WIZ_DB_ALREADY_EXISTS" xml:space="preserve">
+    <value>База данных {0} уже существует. Введите другое имя</value>
+  </data>
+  <data name="WIZ_DB_ENTER_PASSWORD" xml:space="preserve">
+    <value>Пароль должен содержать не менее 8 и не более 80 символов, а также содержать символы верхнего/нижнего регистра и цифры</value>
+  </data>
+  <data name="WIZ_SRV_LOGIN_FAILED" xml:space="preserve">
+    <value>Невозможно подключиться к {0}.</value>
+  </data>
+  <data name="WIZ_DB_RECONFIRM_PASSWORD" xml:space="preserve">
+    <value>Введенные пароли не совпадают</value>
+  </data>
+  <data name="WIZ_AD_SID_NOT_FOUND" xml:space="preserve">
+    <value>Текущий пользователь {0} не принадлежит указанному контейнеру {1}. Выберете другой контейнер объектов</value>
+  </data>
+  <data name="WIZ_DB_LOGIN_FAILED" xml:space="preserve">
+    <value>Невозможно подключиться к серверу БД {0} пользователю {1}.</value>
+  </data>
+  <data name="WIZ_INVALID_DATABASE" xml:space="preserve">
+    <value>Неверная база данных или отсутствует доступ.</value>
+  </data>
+  <data name="WIZ_INVALID_CONNECTION_STRING" xml:space="preserve">
+    <value>Невозможно открыть соединение с БД. Проверьте строку подключения.</value>
+  </data>
+  <data name="WIZ_CAPTION_CONNECT" xml:space="preserve">
+    <value>{0} - Подключиться к базе данных</value>
+  </data>
+  <data name="WIZ_DB_SELECT_DB" xml:space="preserve">
+    <value>Не выбрана база данных.</value>
+  </data>
+  <data name="WIZ_DB_USER_ALREADY_EXISTS" xml:space="preserve">
+    <value>Указанный логин {0} уже существует. Введите другое имя.</value>
+  </data>
+  <data name="WIZ_CAPTION_CREATE" xml:space="preserve">
+    <value>{0} - Создать базу данных</value>
+  </data>
+  <data name="WIZ_DB_ENTER_DB" xml:space="preserve">
+    <value>Не указано имя базы данных</value>
+  </data>
+  <data name="WIZ_SRV_SELECT" xml:space="preserve">
+    <value>Не указан сервер базы данных</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_DIGIT" xml:space="preserve">
+    <value>Пароль должен содержать цифры</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_LOWER" xml:space="preserve">
+    <value>Пароль должен содержать символы в нижнем регистре</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_SPECIAL" xml:space="preserve">
+    <value>Пароль должен содержать специальные символы</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_NO_UPPER" xml:space="preserve">
+    <value>Пароль должен содержать символы в верхнем регистре</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_TOO_SHORT" xml:space="preserve">
+    <value>Пароль должен содержать не менее {0} символов</value>
+  </data>
+  <data name="WIZ_DB_INVALID_DATABASE_NAME" xml:space="preserve">
+    <value>Допустимые символы: A-Z,А-Я,0-9 и _</value>
+  </data>
+  <data name="WIZ_DB_INVALID_LOGIN" xml:space="preserve">
+    <value>Допустимые символы: A-Z,А-Я,0-9 и _</value>
+  </data>
+  <data name="WIZ_DB_INVALID_DATABASE_NAME_EXT" xml:space="preserve">
+    <value>Недопустимое имя базы данных. В имени разрешены только символы алфавита, цифры и знак подчеркивания</value>
+  </data>
+  <data name="WIZ_DB_INVALID_LOGIN_EXT" xml:space="preserve">
+    <value>Недопустимый логин пользователя. В имени разрешены только символы алфавита, цифры и знак подчеркивания </value>
+  </data>
+  <data name="WIZ_DB_WIZ_INVALID_PASSWORD_SYMBOLS" xml:space="preserve">
+    <value>Пароль не должен содержать символы [ или ]</value>
+  </data>
+  <data name="WIZ_SRV_DB_USER_IS_NOT_ADMIN" xml:space="preserve">
+    <value>Выбранный пользователь не обладает административными правами, требуемыми для создания базы данных. Добавьте пользователя в серверную группу sysadmin.</value>
+  </data>
+  <data name="WIZ_SRV_WINDOWS_USER_IS_NOT_ADMIN" xml:space="preserve">
+    <value>Текущий пользователь Windows не обладает административными правами, требуемыми для создания базы данных. Добавьте пользователя в серверную группу sysadmin.</value>
+  </data>
+  <data name="WIZ_DB_GRANT_PERMISSION_ERROR" xml:space="preserve">
+    <value>Ошибка при предоставлении прав текущему пользователю на доступ к существующей базе данных. После завершения установки необходимо сконфигурировать доступ сервиса к базе данных в ручном режиме, либо перезапустите мастер соединения с базой данных под учетной записью пользователя, обладающего правами securityadmin.</value>
+  </data>
+  <data name="WIZ_SRV_INVALID_DB_PERMISSIONS" xml:space="preserve">
+    <value>Отсутствуют необходимые разрешения</value>
+  </data>
+  <data name="WIZ_DB_PASSWORD_TOO_LONG" xml:space="preserve">
+    <value>Пароль должен содержать не более {0} символов</value>
+  </data>
+  <data name="WIZ_DB_ENTER_EXISTS_PASSWORD" xml:space="preserve">
+    <value>Пароль должен содержать не менее 8 и не более 80 символов</value>
+  </data>
+  <data name="I_ITA_SERVER_RESTART_WARNING" xml:space="preserve">
+    <value>Запуск мастера первоначальной настройки продукта приведет к перезапуску сервера управления. Продолжить?</value>
+  </data>
+  <data name="E_ITA_UPDATE_INVALID_SCRIPT" xml:space="preserve">
+    <value>Не удалось прочитать сценарий обновления базы данных из ресурсов.</value>
+  </data>
+  <data name="E_ITA_DB_HAS_OLD_VERSION" xml:space="preserve">
+    <value>Текущая версия базы данных ({0}) не поддерживается сервером. Требуется версия БД - {1}.</value>
+  </data>
+  <data name="E_ITA_UPDATE_INVALID_DATABASE" xml:space="preserve">
+    <value>Не удалось определить версию базы данных. Возможно, база данных имеет неверную структуру
+.</value>
+  </data>
+  <data name="E_ITA_UPDATE_UNKNOWN_VERSION" xml:space="preserve">
+    <value>Не удалось определить версию базы данных.</value>
+  </data>
+  <data name="E_ITA_UPDATE_OLD_VERSION" xml:space="preserve">
+    <value>Обновление текущей версии {0} невозможно. Минимально поддерживаемой модулем обновления версией является {1}.</value>
+  </data>
+  <data name="E_ITA_UPDATE_UNSUPPORTED_VERSION" xml:space="preserve">
+    <value>Обновление текущей версии базы данных не поддерживается.</value>
+  </data>
+  <data name="E_ITA_UPDATE_UNSUPPORTED_ACTION" xml:space="preserve">
+    <value>Неподдерживаемый тип действия по обновлению.</value>
+  </data>
+  <data name="E_ITA_UPDATE_NO_CUSTOM_STEP" xml:space="preserve">
+    <value>Не реализован интерфейс ICustomUpdateStep.</value>
+  </data>
+  <data name="I_ITA_FINISHED" xml:space="preserve">
+    <value>Успешно завершено</value>
+  </data>
+  <data name="E_ITA_ERROR" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="E_ITA_UPDATE_FATAL_ERROR" xml:space="preserve">
+    <value>Критическая ошибка при обновлении базы данных.</value>
+  </data>
+  <data name="E_ITA_FINISHED_WITH_ERRORS" xml:space="preserve">
+    <value>Завершено с ошибками</value>
+  </data>
+  <data name="I_ITA_RESULT_WAIT" xml:space="preserve">
+    <value>Ожидание результата...</value>
+  </data>
+  <data name="I_ITA_DATABASE_IS_ACTUAL" xml:space="preserve">
+    <value>База данных имеет актуальную версию</value>
+  </data>
+  <data name="I_ITA_DATABASE_IS_NOT_ACTUAL" xml:space="preserve">
+    <value>Необходимо выполнить обновление базы данных</value>
+  </data>
+  <data name="E_ITA_DATABASE_IS_UNAVAILABLE" xml:space="preserve">
+    <value>База данных недоступна или ее версия не поддерживается</value>
+  </data>
+  <data name="E_ITA_DATABASE_VERSION_ERROR" xml:space="preserve">
+    <value>Ошибка при проверке базы данных</value>
+  </data>
+  <data name="E_ITA_USER_ACCESS_ERROR" xml:space="preserve">
+    <value>Ошибка проверки прав пользователя</value>
+  </data>
+  <data name="I_ITA_THANKS" xml:space="preserve">
+    <value>Спасибо!</value>
+  </data>
+  <data name="I_ITA_DATABASE_WELCOME" xml:space="preserve">
+    <value>Вас приветствует Мастер подключения к базе данных</value>
+  </data>
+  <data name="I_ITA_DATABASE_INFO" xml:space="preserve">
+    <value>Мастер помогает настроить подключение к новой или существующей базе данных сервера.</value>
+  </data>
+  <data name="E_ITA_DATABASE_VALIDATION_FAILED" xml:space="preserve">
+    <value>Ошибка при определении типа сервера базы данных</value>
+  </data>
+  <data name="E_ITA_DATABASE_UNKNOWN_USER" xml:space="preserve">
+    <value>Ошибка при поиске пользователя по SID</value>
+  </data>
+  <data name="E_DBWIZARD_LIST_DB_ERROR" xml:space="preserve">
+    <value>Ошибка получения списка баз данных и пользователей с сервера баз данных.</value>
+  </data>
+  <data name="E_ITA_INITIAL_WIZARD_DATABASE_UPDATE_ERROR" xml:space="preserve">
+    <value>Критическая ошибка при обновлении базы данных.</value>
+  </data>
+  <data name="E_DBWIZARD_DATABASE_SETUP_FAILED" xml:space="preserve">
+    <value>Ошибка при создании базы данных.</value>
+  </data>
+  <data name="I_SERVER_STATUS_RUNNING_BALLOON" xml:space="preserve">
+    <value>Сервер запущен.</value>
+  </data>
+  <data name="E_DBWIZARD_ERROR" xml:space="preserve">
+    <value>Внутренняя ошибка мастера настройки соединения с базой данных.</value>
+  </data>
+  <data name="E_DBWIZARD_LIST_SERVERS" xml:space="preserve">
+    <value>Ошибка получения списка доступных серверов баз данных.</value>
+  </data>
+  <data name="E_ITA_UNHANDLED_EXCEPTION" xml:space="preserve">
+    <value>Произошла неожиданная ошибка.</value>
+  </data>
+  <data name="E_ITA_OPEN_EVENTLOG" xml:space="preserve">
+    <value>Не удалось открыть "Журнал событий".</value>
+  </data>
+  <data name="IDS_WIZ_SRV_ORACLE_NOT_FOUND" xml:space="preserve">
+    <value>Unable to initialize Oracle Data Provider for .NET.
+It is either not installed or not properly configured.</value>
+  </data>
+  <data name="WIZ_SRV_DB_PROVIDER_IS_NOT_AVAILABLE" xml:space="preserve">
+    <value>Выбранный провайдер базы данных ({0}) недоступен. Выберите другой тип провайдера.</value>
+  </data>
+  <data name="WIZ_SELECT_DB_WIN_AUTH_SERVER_CAPTION" xml:space="preserve">
+    <value>Проверка Windows-аутентификации для сервера БД.</value>
+  </data>
+  <data name="WIZ_SELECT_DB_WIN_AUTH_SERVER_MESSAGE" xml:space="preserve">
+    <value>Мастер развертывания успешно проверил доступность базы данных для пользователя '{0}'.
+Если настройка производится для службы, работающей под другой учетной записью, то после завершения конфигурирования может потребоваться ручное предоставление доступа к БД для сервисной учетной записи.</value>
+  </data>
+  <data name="WIZ_SUCCESS_UPDATE" xml:space="preserve">
+    <value>База данных успешно оновлена до версии {0}</value>
+  </data>
+  <data name="WIZ_DB_DOESNT_NEED_UPDATE" xml:space="preserve">
+    <value>База не нуждается в обновлении.</value>
+  </data>
+  <data name="WIZ_USAGE_MESSAGE_TEMPLATE" xml:space="preserve">
+    <value>Пример использования:
+{0} [[[/&lt;key&gt;=&lt;value&gt;] /&lt;key&gt;=&lt;value&gt;] ...]
+
+, где &lt;key&gt; и &lt;value&gt; это:
+	UnattendedMode - признак запуска визарда в автоматическом режиме. Его значения:true, false. Значение по-умолчанию:false. Если значение false или опущено, то мастер развертывания будет проинициализирован остальными переданными значениями. Если значение равно true, то мастер развертывания будет запущен в режиме авторазвертывания.
+
+	DbProviderType - тип провайдера базы данных. Его значения:{1}. Значение по-умолчанию:{2}
+
+Параметры, общие для всех провайдеров БД:
+
+	ServerName - имя сервера базы данных. Значение по-умолчанию не определено.
+	ServerLogin - имя пользователя для административного подключения. Значение по-умолчанию не определено.
+	ServerPassword - пароль пользователя для административного подключения. Значение по-умолчанию не определено.
+	DatabaseName - имя базы данных. Значение по-умолчанию не определено.
+	DatabaseLogin - имя пользователя для подключения к базе данных. Значение по-умолчанию не определено.
+	DatabasePassword - пароль пользователя для подключения к базе данных. Значение по-умолчанию не определено.
+	CreateNewDatabase - признак необходимости создания новой базы данных. Его значения:true, false. Значение по-умолчанию:false.
+	CreateNewDatabaseLogin - признак необходимости создания нового пользователя базы данных. Его значения:true, false. Значение по-умолчанию:false.
+	ConnectionString - сторока подключения к базе данных. Значение по-умолчанию не определено. Если значение задано, то оно будет использоваться как существующая конфигурация.
+
+Параметры для провайдера БД типа {3}
+
+	ServerCredentialType - тип административного подключения к базе данных SQL Server. Его значения:{4}. Значение по-умолчанию:{5}
+	DatabaseCredentialType - тип пользовательского подключения к базе данных SQL Server. Его значения:{6}. Значение по-умолчанию:{7}
+
+Параметры для провайдера БД типа {8}
+
+	ServerDatabasePort - номер порта, который будет использоваться для подключения к серверу базы данных Oracle. Его значения:0-65535. Значение по-умолчанию 1521.
+	ServerDatabaseSID - SID базы данных Oracle. Значение по-умолчанию не определено.
+
+Пример запуска в режиме авторазвертывания:
+{9} /UnattendedMode=true /DbProviderType=MSSQL /ServerName:.\sqlexpress /ServerCredentialType=NT /CreateNewDatabase=true /DatabaseName=DemoWizardDb /DatabaseCredentialType=NT</value>
+  </data>
+  <data name="WIZ_PARAMETER_VALIDATION_ERROR" xml:space="preserve">
+    <value>Параметр '{0}' не задан.</value>
+  </data>
+  <data name="WIZ_SELECT_DB_MESSAGE" xml:space="preserve">
+    <value>Выбор базы данных</value>
+  </data>
+  <data name="WIZ_SQL_SELECT_DB_AND_SETTINGS" xml:space="preserve">
+    <value>Укажите базу данных и настройки подключения</value>
+  </data>
+  <data name="WIZ_SQL_SELECT_DB_NAME" xml:space="preserve">
+    <value>Укажите имя БД</value>
+  </data>
+  <data name="WIZ_SQL_PASSWORD" xml:space="preserve">
+    <value>&amp;Пароль:</value>
+  </data>
+  <data name="WIZ_SQL_PASSWORD_CONFIRM" xml:space="preserve">
+    <value>По&amp;дтверждение пароля:</value>
+  </data>
+  <data name="WIZ_SQL_CONNECTION_SETTINGS" xml:space="preserve">
+    <value>Настройки подключения сервера к БД</value>
+  </data>
+  <data name="WIZ_SQL_AUTH_MODE" xml:space="preserve">
+    <value>Укажите способ проверки подлинности</value>
+  </data>
+  <data name="WIZ_SQL_AUTH" xml:space="preserve">
+    <value>Средствами &amp;SQL Server</value>
+  </data>
+  <data name="WIZ_SQL_NT_AUTH" xml:space="preserve">
+    <value>Средствами &amp;Windows</value>
+  </data>
+  <data name="WIZ_SQL_USE_SSL" xml:space="preserve">
+    <value>Защищенное соединение</value>
+  </data>
+  <data name="WIZ_SRV_SSL_FAILED" xml:space="preserve">
+    <value>Не удалось установить защищенное SSL-соединение.</value>
+  </data>
+  <data name="WIZ_SQL_CREATE_NEW_LOGIN" xml:space="preserve">
+    <value>&amp;Создать новый логин</value>
+  </data>
+  <data name="WIZ_SQL_LOGIN" xml:space="preserve">
+    <value>&amp;Логин:</value>
+  </data>
+  <data name="WIZ_SQL_CANNOT_VALIDATE_USER" xml:space="preserve">
+    <value>Невозможно выполнить проверку доступуа для '{0}'.</value>
+  </data>
+  <data name="WIZ_SQL_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>Необходимо ввести пароль</value>
+  </data>
+  <data name="WIZ_ORACLE_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>Необходимо ввести пароль</value>
+  </data>
+  <data name="WIZ_ORACLE_CREATE_NEW_USER" xml:space="preserve">
+    <value>&amp;Создать нового пользователя</value>
+  </data>
+  <data name="WIZ_ORACLE_SELECT_SCHEME" xml:space="preserve">
+    <value>Выберите схему базы данных:</value>
+  </data>
+  <data name="WIZ_ORACLE_USER_SETTINGS" xml:space="preserve">
+    <value>Настойки пользователя</value>
+  </data>
+  <data name="WIZ_ORACLE_USER_NAME" xml:space="preserve">
+    <value>&amp;Имя пользователя:</value>
+  </data>
+  <data name="WIZ_ORACLE_SELECT_USER_SETTINGS" xml:space="preserve">
+    <value>Укажите параметры пользователя, который будет использоваться для подключения к базе данных</value>
+  </data>
+  <data name="WIZ_ORACLE_SETTINGS_DESCRIPTION" xml:space="preserve">
+    <value>Предоставленные параметры пользователя будут использоваться для серверного подключение и будут сопоставленны с выбранной базой данных</value>
+  </data>
+  <data name="WIZ_ORACLE_SET_SCHEME_NAME" xml:space="preserve">
+    <value>Пожалуйста, задайте имя &amp;схемы базы данных:</value>
+  </data>
+  <data name="WIZ_ORACLE_PASSWORD_IS_NOT_PROVIDED" xml:space="preserve">
+    <value>Не указан пароль</value>
+  </data>
+  <data name="WIZ_ORACLE_CONNECTION" xml:space="preserve">
+    <value>Подключение к Oracle</value>
+  </data>
+  <data name="WIZ_ORACLE_SELECT_SERVER" xml:space="preserve">
+    <value>Выберите сервер Oracle и укажите парметры подключения для администратора</value>
+  </data>
+  <data name="WIZ_ORACLE_CONNECTING" xml:space="preserve">
+    <value>Подключение</value>
+  </data>
+  <data name="WIZ_ORACLE_USER_NAME_LABEL" xml:space="preserve">
+    <value>Имя пользователя:</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_PORT" xml:space="preserve">
+    <value>Введите порт сервера БД:</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_SID" xml:space="preserve">
+    <value>Введите SID БД:</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_SERVER_NAME" xml:space="preserve">
+    <value>Введите имя сервера:</value>
+  </data>
+  <data name="WIZ_ORACLE_CHECK_CONNECTION" xml:space="preserve">
+    <value>&amp;Проверка соединения</value>
+  </data>
+  <data name="WIZ_ORACLE_ENTER_ADMIN_USER_NAME" xml:space="preserve">
+    <value>Укажите пользователя с административными правами:</value>
+  </data>
+  <data name="WIZ_ORACLE_PASSWORD" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="WIZ_SQL_SERVER_SEARCHING" xml:space="preserve">
+    <value>Идет поиск серверов...</value>
+  </data>
+  <data name="WIZ_SQL_SELECTING_CONNECTION_SETTINGS" xml:space="preserve">
+    <value>Выбор настроек подключения</value>
+  </data>
+  <data name="WIZ_SQL_SET_SERVER_NAME_AND_AUTH_MODE" xml:space="preserve">
+    <value>Укажите имя сервера базы данных и способ проверки подлинности при подключении</value>
+  </data>
+  <data name="WIZ_SELECT_SERVER_NAME" xml:space="preserve">
+    <value>Укажите &amp;сервер БД</value>
+  </data>
+  <data name="WIZ_SQL_PROVIDE_AUTH_MODE" xml:space="preserve">
+    <value>Укажите способ проверки подлинности для административного соединения:</value>
+  </data>
+  <data name="WIZ_SQL_TEST_CONNECTION" xml:space="preserve">
+    <value>&amp;Тест соединения</value>
+  </data>
+  <data name="WIZ_SQL_CONFIGURING_ADMIIN_CONNECTION" xml:space="preserve">
+    <value>Настройки административного подключения Мастера к БД</value>
+  </data>
+  <data name="WIZ_SQL_PRESS_FOR_UPDATING_SERVER_LIST" xml:space="preserve">
+    <value>Нажмите для обновления списка серверов</value>
+  </data>
+  <data name="WIZ_SQL_SERVER_LIST_IS_UPDATING" xml:space="preserve">
+    <value>Список серверов обновляется...</value>
+  </data>
+  <data name="WIZ_CREATE_NEW_DB" xml:space="preserve">
+    <value>Создание новой БД</value>
+  </data>
+  <data name="WIZ_CONNECT_TO_EXISTING_DB" xml:space="preserve">
+    <value>Подключение к существующей БД</value>
+  </data>
+  <data name="WIZ_SQL_SERVER" xml:space="preserve">
+    <value>MS SQL Server</value>
+  </data>
+  <data name="WIZ_ORACLE" xml:space="preserve">
+    <value>Oracle</value>
+  </data>
+  <data name="WIZ_NT_SECURITY" xml:space="preserve">
+    <value>NT Security</value>
+  </data>
+  <data name="WIZ_PARAMETER_CONFIRMATION" xml:space="preserve">
+    <value>Подтверждение параметров</value>
+  </data>
+  <data name="WIZ_VALIDATE_PARAMETERS" xml:space="preserve">
+    <value>Проверьте правильность введенных параметров перед выполнением операции</value>
+  </data>
+  <data name="WIZ_CLICK_NEXT" xml:space="preserve">
+    <value>Мастером собрана вся необходимая информация для настройки базы данных. Нажмите "Далее" для запуска процесса или "Назад" для возврата к настройкам.</value>
+  </data>
+  <data name="WIZ_CONNECTION_PARAMETERS" xml:space="preserve">
+    <value>Параметры соединения к базе данных</value>
+  </data>
+  <data name="WIZ_ACTION" xml:space="preserve">
+    <value>Действие:</value>
+  </data>
+  <data name="WIZ_SERVER_DB" xml:space="preserve">
+    <value>Сервер БД:</value>
+  </data>
+  <data name="WIZ_DB_NAME" xml:space="preserve">
+    <value>Имя БД:</value>
+  </data>
+  <data name="WIZ_DB_LOGIN" xml:space="preserve">
+    <value>Логин БД:</value>
+  </data>
+  <data name="WIZ_PROVIDER" xml:space="preserve">
+    <value>Провайдер:</value>
+  </data>
+  <data name="WIZ_PRODUCT_CONFIGURATION" xml:space="preserve">
+    <value>Конфигурация продукта</value>
+  </data>
+  <data name="WIZ_CONFIG_VALIDATION" xml:space="preserve">
+    <value>Проверка существующей конфигурации</value>
+  </data>
+  <data name="WIZ_DB_VALIDATION" xml:space="preserve">
+    <value>Проверка существующей базы данных</value>
+  </data>
+  <data name="WIZ_VALIDATION_RESULT" xml:space="preserve">
+    <value>Результат проверки</value>
+  </data>
+  <data name="WIZ_VALIDATION_RESULT2" xml:space="preserve">
+    <value>Результат проверки:</value>
+  </data>
+  <data name="WIZ_DB_CREATING" xml:space="preserve">
+    <value>Создание базы данных</value>
+  </data>
+  <data name="WIZ_PERFORMING_OPERATION" xml:space="preserve">
+    <value>Выполнение операции</value>
+  </data>
+  <data name="WIZ_CREATING_AND_CONFIGURATING" xml:space="preserve">
+    <value>Выполняется создание и настройка базы данных сервера.</value>
+  </data>
+  <data name="WIZ_CONFIGURATION_SELECTING" xml:space="preserve">
+    <value>Выбор конфигурации</value>
+  </data>
+  <data name="WIZ_SELECTING_CONFIGURATION_MODE" xml:space="preserve">
+    <value>Выбор режима использования существующей конфигурации</value>
+  </data>
+  <data name="WIZ_USING_EXISTING_CONFIG" xml:space="preserve">
+    <value>Использование существующей конфигурации</value>
+  </data>
+  <data name="WIZ_CREATE_NEW_CONFIG" xml:space="preserve">
+    <value>Создать новую конфигурацию</value>
+  </data>
+  <data name="WIZ_SELECT_CONFIG_USING_MODE" xml:space="preserve">
+    <value>Выберите режим использования существующей конфигурации.</value>
+  </data>
+  <data name="WIZ_USING_EXISTING_CONFIG_DESCRIPTION" xml:space="preserve">
+    <value>Мастер будет использовать существующую конфигурацию для подключения к БД</value>
+  </data>
+  <data name="WIZ_NEW_CONFIG_DESCRIPTION" xml:space="preserve">
+    <value>Мастер позволит создать новую конфигурацию БД</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE" xml:space="preserve">
+    <value>Выбор режима работы Мастера</value>
+  </data>
+  <data name="WIZ_WIZARD_MODE_DESCRIPTION" xml:space="preserve">
+    <value>Выбор режима создания базы данных или подключение существующей</value>
+  </data>
+  <data name="WIZ_CREATE_NEW_DB_MODE" xml:space="preserve">
+    <value>Создание &amp;новой базы данных</value>
+  </data>
+  <data name="WIZ_CONNECT_TO_DB_MODE" xml:space="preserve">
+    <value>Подключение к &amp;существующей базе данных</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE_DESC1" xml:space="preserve">
+    <value>Укажите режим работы Мастера - создание новой базы данных или настройка подключения к существующей базе данных.</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE_DESC2" xml:space="preserve">
+    <value>Мастер соберет необходимую информацию, создаст новую базу данных, проинициализирует ее и настроит продукт на ее использование.</value>
+  </data>
+  <data name="WIZ_SELECT_WIZARD_MODE_DESC3" xml:space="preserve">
+    <value>Мастер позволит настроить продукт на использование существующей базы данных.</value>
+  </data>
+  <data name="WIZ_DB_PROVIDER" xml:space="preserve">
+    <value>Провайдер базы данных</value>
+  </data>
+  <data name="WIZ_SELECT_DB_PROVIDER" xml:space="preserve">
+    <value>Выберите провайдер базы данных</value>
+  </data>
+  <data name="WIZ_CONFIG_PARAMETERS_HAVE_ERRORS" xml:space="preserve">
+    <value>Параметры инициализации содержат ошибки:</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_STARTED" xml:space="preserve">
+    <value>Авторазвертывание запущенно...</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_COMPLETED" xml:space="preserve">
+    <value>Авторазвертывание завершено.</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_ERROR" xml:space="preserve">
+    <value>Ошибка режима авторазвертывания:</value>
+  </data>
+  <data name="WIZ_AUTO_MODE_INIT_ERROR" xml:space="preserve">
+    <value>Произошла ошибка считывания параметров инициализации:</value>
+  </data>
+  <data name="WIZ_NO_UPDATE_RULES" xml:space="preserve">
+    <value>Отсутствует список правил обновления базы данных. Загрузите правила с помощью метода LoadRules.</value>
+  </data>
+  <data name="WIZ_BACKUP" xml:space="preserve">
+    <value>Резервное копирование базы данных</value>
+  </data>
+  <data name="WIZ_NEED_BACKUP" xml:space="preserve">
+    <value>Необходимо выполнить резервное копирование существующей базы данных</value>
+  </data>
+  <data name="WIZ_NEED_BACKUP_MESSAGE" xml:space="preserve">
+    <value>Перед началом обновления базы данных следует ОБЯЗАТЕЛЬНО
+выполнить резервное копирование существующей версии базы данных.</value>
+  </data>
+  <data name="WIZ_BACKUP_CONFIRM" xml:space="preserve">
+    <value>Подтверждаю, что перед обновлением базы данных
+было выполнено резервное копирование</value>
+  </data>
+  <data name="WIZ_CONFIRM_BACKUP_IS_ACTUAL" xml:space="preserve">
+    <value>Подтверждаю, что сделанная резервная копия является актуальной</value>
+  </data>
+  <data name="WIZ_DB_UPDATING" xml:space="preserve">
+    <value>Обновление базы данных</value>
+  </data>
+  <data name="WIZ_DB_IS_UPDATED" xml:space="preserve">
+    <value>База данных была успешно обновлена</value>
+  </data>
+  <data name="WIZ_DB_IS_UPDATED_TO_VERSION" xml:space="preserve">
+    <value>База данных была успешно обновлена до версии:</value>
+  </data>
+  <data name="WIZ_DB_NEED_TO_BE_UPDATED" xml:space="preserve">
+    <value>Для продолжения настройки сервера требуется выполнить обновление
+выбранной базы данных до актуальной версии: </value>
+  </data>
+  <data name="WIZ_DB_VERSION_CURRENT" xml:space="preserve">
+    <value>Версия текущей базы данных:</value>
+  </data>
+  <data name="WIZ_DB_VERSION_ACTUAL" xml:space="preserve">
+    <value>Версия, требуемая для работы:</value>
+  </data>
+  <data name="WIZ_NEED_BACKUP_DESCRIPTION" xml:space="preserve">
+    <value>Перед началом обновления базы данных следует ОБЯЗАТЕЛЬНО
+выполнить резервное копирование существующей версии базы данных.</value>
+  </data>
+  <data name="WIZ_DB_CURRENT_NAME" xml:space="preserve">
+    <value>Имя текущей базы данных:</value>
+  </data>
+  <data name="WIZ_WAIT_UPDATING_COMPLETE" xml:space="preserve">
+    <value>Дождитесь завершения обновления базы данных</value>
+  </data>
+  <data name="WIZ_UPDATING_PROGRESS" xml:space="preserve">
+    <value>Прогресс выполнения:</value>
+  </data>
+  <data name="WIZ_DB_TITLE" xml:space="preserve">
+    <value>Мастер подключения к базе данных</value>
+  </data>
+  <data name="WIZ_MYSQL" xml:space="preserve">
+    <value>MySql</value>
+  </data>
+  <data name="WIZ_MYSQL_CHECK_CONNECTION" xml:space="preserve">
+    <value>&amp;Проверка соединения</value>
+  </data>
+  <data name="WIZ_MYSQL_CONNECTING" xml:space="preserve">
+    <value>Подключение</value>
+  </data>
+  <data name="WIZ_MYSQL_CONNECTION" xml:space="preserve">
+    <value>Подключение к MySql</value>
+  </data>
+  <data name="WIZ_MYSQL_CREATE_NEW_USER" xml:space="preserve">
+    <value>&amp;Создать нового пользователя</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_ADMIN_USER_NAME" xml:space="preserve">
+    <value>Укажите пользователя с административными правами:</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_PORT" xml:space="preserve">
+    <value>Введите порт сервера БД:</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_SERVER_NAME" xml:space="preserve">
+    <value>Введите имя сервера:</value>
+  </data>
+  <data name="WIZ_MYSQL_ENTER_SID" xml:space="preserve">
+    <value>Введите SID БД:</value>
+  </data>
+  <data name="WIZ_MYSQL_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>Необходимо ввести пароль</value>
+  </data>
+  <data name="WIZ_MYSQL_PASSWORD" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="WIZ_MYSQL_PASSWORD_IS_NOT_PROVIDED" xml:space="preserve">
+    <value>Не указан пароль</value>
+  </data>
+  <data name="WIZ_MYSQL_SELECT_SCHEME" xml:space="preserve">
+    <value>Выберите схему базы данных:</value>
+  </data>
+  <data name="WIZ_MYSQL_SELECT_SERVER" xml:space="preserve">
+    <value>Выберите сервер MySql и укажите парметры подключения для администратора</value>
+  </data>
+  <data name="WIZ_MYSQL_SELECT_USER_SETTINGS" xml:space="preserve">
+    <value>Укажите параметры пользователя, который будет использоваться для подключения к базе данных</value>
+  </data>
+  <data name="WIZ_MYSQL_SETTINGS_DESCRIPTION" xml:space="preserve">
+    <value>Предоставленные параметры пользователя будут использоваться для серверного подключение и будут сопоставленны с выбранной базой данных</value>
+  </data>
+  <data name="WIZ_MYSQL_SET_SCHEME_NAME" xml:space="preserve">
+    <value>Пожалуйста, задайте имя &amp;схемы базы данных:</value>
+  </data>
+  <data name="WIZ_MYSQL_USER_NAME" xml:space="preserve">
+    <value>&amp;Имя пользователя:</value>
+  </data>
+  <data name="WIZ_MYSQL_USER_NAME_LABEL" xml:space="preserve">
+    <value>Имя пользователя:</value>
+  </data>
+  <data name="WIZ_MYSQL_USER_SETTINGS" xml:space="preserve">
+    <value>Настойки пользователя</value>
+  </data>
+  <data name="WIZ_SRV_NO_CREATE_DB_PERMISSION" xml:space="preserve">
+    <value>Выбранный пользователь не имеет административных прав, необходимых для создания базы данных. Предоставьте пользователю разрешение 'CREATE ANY DATABASE'.</value>
+  </data>
+  <data name="WIZ_SRV_NO_CREATE_LOGIN_PERMISSION" xml:space="preserve">
+    <value>Выбранный пользователь не имеет административных прав, необходимых для создания входа в SQL Server. Предоставьте пользователю разрешение 'ALTER ANY LOGIN'.</value>
+  </data>
+  <data name="WIZ_AZURE_SQL" xml:space="preserve">
+    <value>Azure SQL</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CHECK_CONNECTION" xml:space="preserve">
+    <value>&amp;Проверка соединения</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CONNECTING" xml:space="preserve">
+    <value>Подключение</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CONNECTION" xml:space="preserve">
+    <value>Подключение к Azure SQL</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CREATE_NEW_USER" xml:space="preserve">
+    <value>&amp;Создать нового пользователя</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_ENTER_DB_NAME" xml:space="preserve">
+    <value>Имя базы данных:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_ENTER_SERVER_NAME" xml:space="preserve">
+    <value>Имя сервера:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_ENTER_SID" xml:space="preserve">
+    <value>Введите SID БД:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_NEED_ENTER_PASSWORD" xml:space="preserve">
+    <value>Необходимо ввести пароль</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_PASSWORD" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_PASSWORD_IS_NOT_PROVIDED" xml:space="preserve">
+    <value>Не указан пароль</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SELECT_SCHEME" xml:space="preserve">
+    <value>Выберите схему базы данных:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SELECT_SERVER" xml:space="preserve">
+    <value>Выберите сервер Azure SQL и укажите парметры подключения для администратора</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SELECT_USER_SETTINGS" xml:space="preserve">
+    <value>Укажите параметры пользователя, который будет использоваться для подключения к базе данных</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SETTINGS_DESCRIPTION" xml:space="preserve">
+    <value>Предоставленные параметры пользователя будут использоваться для серверного подключение и будут сопоставленны с выбранной базой данных</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_SET_SCHEME_NAME" xml:space="preserve">
+    <value>Пожалуйста, задайте имя &amp;схемы базы данных:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_USER_NAME" xml:space="preserve">
+    <value>&amp;Имя пользователя:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_USER_NAME_LABEL" xml:space="preserve">
+    <value>Имя пользователя:</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_USER_SETTINGS" xml:space="preserve">
+    <value>Настойки пользователя</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_DENY_FOR_DB_CREATION" xml:space="preserve">
+    <value>База данных содержит данные. Создание новой базы данных запрещено.</value>
+  </data>
+  <data name="WIZ_AZURE_SQL_CREDENTIAL_TYPE_NOT_SUPPORTED" xml:space="preserve">
+    <value>Тип учетных данных '{0}' не поддерживатся.</value>
+  </data>
+</root>

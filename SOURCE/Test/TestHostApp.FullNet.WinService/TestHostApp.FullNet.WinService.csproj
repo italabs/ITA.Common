@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D01E690A-2983-408D-9D3D-70118F23D63B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestHostApp.FullNet.WinService</RootNamespace>
+    <AssemblyName>TestHostApp.FullNet.WinService</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\OUTPUT\TestHostApp\Bin\Debug\AnyCPU\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\OUTPUT\TestHostApp\Bin\Release\AnyCPU\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\EXTERNALS\ThirdParty\Newtonsoft.Json\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="AppSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LinuxUnity.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="WinUnity.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HostConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ITA.Common.Host.Windows\ITA.Common.Host.Windows.csproj">
+      <Project>{21411eac-4f11-433e-bee1-4ceca869cde5}</Project>
+      <Name>ITA.Common.Host.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ITA.Common.Host\ITA.Common.Host.csproj">
+      <Project>{4a81ffcd-5022-4bf2-ab9f-5ba2e895ac89}</Project>
+      <Name>ITA.Common.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ITA.Common.Unity\ITA.Common.Unity.csproj">
+      <Project>{8487d15c-378b-4777-8d30-7b7ee87d3f21}</Project>
+      <Name>ITA.Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ITA.Common\ITA.Common.csproj">
+      <Project>{9edc15ef-9cbb-404c-aa5e-b1e66f6f8f88}</Project>
+      <Name>ITA.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestHostApp.BusinessComponent\TestHostApp.BusinessComponent.csproj">
+      <Project>{d8c438d3-616a-48e0-a7af-f19859fbd5fd}</Project>
+      <Name>TestHostApp.BusinessComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestHostApp.Common\TestHostApp.Common.csproj">
+      <Project>{38f5467e-dda8-4c63-8dd0-adc4c91080a5}</Project>
+      <Name>TestHostApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestHostApp.DummyHost\TestHostApp.DummyHost.csproj">
+      <Project>{40322f10-a462-43d2-a95b-5a24699d55a3}</Project>
+      <Name>TestHostApp.DummyHost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestHostApp.Interfaces\TestHostApp.Interfaces.csproj">
+      <Project>{869925f5-984b-41dc-b068-49b695d7524f}</Project>
+      <Name>TestHostApp.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Unity.Abstractions">
+      <Version>4.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="Unity.Configuration">
+      <Version>5.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="Unity.Container">
+      <Version>5.10.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,117 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+    
+    <PropertyGroup>
+      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+      <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\SignKey\ITA.Common.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+    
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\OUTPUT\Bin\Debug\</OutputPath>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\OUTPUT\Bin\Release\</OutputPath>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SdkProject>True</SdkProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FodyWeavers.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ITA.Common.Host\ITA.Common.Host.csproj" />
+    <ProjectReference Include="..\ITA.Common\ITA.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ITA.MethodDecoratorInterfaces">
+      <HintPath>..\..\EXTERNALS\ThirdParty\ITA.MethodDecorator.Fody\ITA.MethodDecoratorInterfaces.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CommonPerfCounterInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="ErrorMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Update="EventLogInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="EventLogInstaller.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EventLogInstaller.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Events.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Events.resx</DependentUpon>
+    </Compile>
+    <Compile Update="IMonitoringEngine.cs" />
+    <Compile Update="Messages.Designer.cs">
+      <DependentUpon>Messages.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="MonitoringEngine\MonitoringEngine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="MonitoringEngine\MonitoringEngine.Designer.cs">
+      <DependentUpon>MonitoringEngine.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ErrorMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EventLogInstaller.resx">
+      <DependentUpon>EventLogInstaller.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EventLogInstaller.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Events.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Events.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="IMonitoringEngine.resx">
+      <DependentUpon>IMonitoringEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Messages.resx">
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MonitoringEngine\MonitoringEngine.resx">
+      <DependentUpon>MonitoringEngine.cs</DependentUpon>
+      <LastGenOutput>MonitoringEngine.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
+    
+</Project>

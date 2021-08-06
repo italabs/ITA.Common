@@ -1,0 +1,16 @@
+/////////////////
+// VersionDefs.rh
+/////////////////
+
+#define ITA_FILE_DESCRIPTION "ITA Common Host Failover Test"
+#define ITA_INTERNAL_NAME "ITA.Common.Host.FailoverTest.dll"
+#define ITA_ORIGINAL_FILE_NAME "ITA.Common.Host.FailoverTest.dll"
+
+#define COMPANY_NAME "__AUTO_GENERATED"
+#define COMPANY_COPYRIGHT "__AUTO_GENERATED"
+#define COMPANY_TRADEMARK "__AUTO_GENERATED"
+#define PRODUCT_NAME "__AUTO_GENERATED"
+#define FILE_VERSION_BIN 1,0,0,0
+#define PRODUCT_VERSION_BIN 1,0,0,0
+#define FILE_VERSION "__AUTO_GENERATED"
+#define PRODUCT_VERSION "__AUTO_GENERATED"

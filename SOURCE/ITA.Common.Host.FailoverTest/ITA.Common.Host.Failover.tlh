@@ -1,0 +1,98 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 11.00.61219.0 (55d6907d).
+//
+// c:\!!!work\!!!it_assits\ita\component\ita.common\rel_3.0.0\trunk\source\ita.common.host.failovertest\x64\debug\ita.common.host.failover.tlh
+//
+// C++ source equivalent of type library c:\!!!Work\!!!It_assits\ITA\COMPONENT\ITA.Common\REL_3.0.0\trunk\SOURCE\ITA.Common.Host.Failover\bin\x64\Debug\ITA.Common.Host.Failover.tlb
+// compiler-generated file created 09/26/16 at 17:42:36 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ITA_Common_Host_Failover {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("647c3014-85d3-47fd-9fea-5580a8e8f926"))
+/* LIBID */ __ITA_Common_Host_Failover;
+struct __declspec(uuid("c0977e94-bb4d-4718-b696-2e336b0e7461"))
+/* dual interface */ IFailoverClusterResource;
+struct /* coclass */ FailoverClusterResource;
+struct __declspec(uuid("2d9f924b-adef-31c7-8a0b-2507df72cae4"))
+/* dual interface */ _FailoverClusterResource;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IFailoverClusterResource, __uuidof(IFailoverClusterResource));
+_COM_SMARTPTR_TYPEDEF(_FailoverClusterResource, __uuidof(_FailoverClusterResource));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("c0977e94-bb4d-4718-b696-2e336b0e7461"))
+IFailoverClusterResource : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Url (
+        /*[out,retval]*/ BSTR * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_Url (
+        /*[in]*/ BSTR pRetVal ) = 0;
+      virtual HRESULT __stdcall get_WindowsService (
+        /*[out,retval]*/ BSTR * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_WindowsService (
+        /*[in]*/ BSTR pRetVal ) = 0;
+      virtual HRESULT __stdcall get_WaitTimeout (
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_WaitTimeout (
+        /*[in]*/ long pRetVal ) = 0;
+      virtual HRESULT __stdcall Online (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall Offline (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall LooksAlive (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall IsAlive (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall Open (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall Close (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall Terminate (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+};
+
+struct __declspec(uuid("c3bae43a-3c88-4ffd-a713-b6f4984a3a74"))
+FailoverClusterResource;
+    // [ default ] interface _FailoverClusterResource
+    // interface _Object
+    // interface IFailoverClusterResource
+
+struct __declspec(uuid("2d9f924b-adef-31c7-8a0b-2507df72cae4"))
+_FailoverClusterResource : IDispatch
+{};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_ITA_Common_Host_Failover =
+    {0x647c3014,0x85d3,0x47fd,{0x9f,0xea,0x55,0x80,0xa8,0xe8,0xf9,0x26}};
+extern "C" const GUID __declspec(selectany) IID_IFailoverClusterResource =
+    {0xc0977e94,0xbb4d,0x4718,{0xb6,0x96,0x2e,0x33,0x6b,0x0e,0x74,0x61}};
+extern "C" const GUID __declspec(selectany) CLSID_FailoverClusterResource =
+    {0xc3bae43a,0x3c88,0x4ffd,{0xa7,0x13,0xb6,0xf4,0x98,0x4a,0x3a,0x74}};
+extern "C" const GUID __declspec(selectany) IID__FailoverClusterResource =
+    {0x2d9f924b,0xadef,0x31c7,{0x8a,0x0b,0x25,0x07,0xdf,0x72,0xca,0xe4}};
+
+} // namespace ITA_Common_Host_Failover
+
+#pragma pack(pop)

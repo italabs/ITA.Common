@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="I_ITA_AGENT_SELECT_FILE" xml:space="preserve">
+    <value>Введите имя файла или выберите его с помощью кнопки Обзор</value>
+</data>
+  <data name="I_ITA_AGENT_DIRECTORY_IS_NOT_EXIST" xml:space="preserve">
+    <value>Введенный каталог не существует</value>
+</data>
+  <data name="I_ITA_AGENT_MK_EXPORT_WELCOME" xml:space="preserve">
+    <value>Вас приветствует мастер экспорта мастер-ключа БД</value>
+</data>
+  <data name="I_ITA_AGENT_MK_EXPORT_INFO" xml:space="preserve">
+    <value>Мастер экспорта мастер-ключа помогает сохранить резервную копию мастер-ключа базы данных сервера.</value>
+</data>
+  <data name="I_ITA_AGENT_THANKS" xml:space="preserve">
+    <value>Спасибо!</value>
+</data>
+  <data name="E_ITA_AGENT_PASSWORD_IS_SHORT" xml:space="preserve">
+    <value>Введенный пароль слишком короткий. В пароле должно быть не менее 6 символов.</value>
+</data>
+  <data name="E_ITA_AGENT_PASSWORD_IS_DIFF" xml:space="preserve">
+    <value>Введенные пароли не совпадают</value>
+</data>
+  <data name="I_ITA_THANKYOU_MESSAGE">
+    <value xml:space="preserve">Спасибо за использование Мастера</value>
+  </data>
+  <data name="I_ITA_COMPLETE_MESSAGE">
+    <value xml:space="preserve">Вы успешно завершили все необходимые шаги Мастера.</value>
+  </data>
+  <data name="I_ITA_CLICK_CLOSE">
+    <value xml:space="preserve">Нажмите Завершить, чтобы закрыть Мастер.</value>
+  </data>
+  <data name="I_ITA_WELCOME_MESSAGE">
+    <value xml:space="preserve">Вас приветствует мастер настройки</value>
+  </data>
+  <data name="I_ITA_CONTINUE_MESSAGE">
+    <value xml:space="preserve">Для продолжения нажмите Далее.</value>
+  </data>
+  <data name="I_ITA_ABOUT_MESSAGE">
+    <value xml:space="preserve">Этот Мастер поможет вам сделать все что надо</value>
+  </data>
+  <data name="I_ITA_ARE_YOU_SURE">
+    <value xml:space="preserve">Вы действительно хотите прервать работу мастера?</value>
+  </data>
+  <data name="I_ITA_BACK">
+    <value>&lt; &amp;Назад</value>
+  </data>
+  <data name="I_ITA_NEXT">
+    <value>&amp;Далее &gt;</value>
+  </data>
+  <data name="I_ITA_FINISH">
+    <value>&amp;Завершить</value>
+  </data>
+  <data name="I_ITA_CANCEL">
+    <value>&amp;Отмена</value>
+  </data>
+  <data name="I_ITA_CAPTION">
+    <value xml:space="preserve">Мастер</value>
+  </data>
+</root>
