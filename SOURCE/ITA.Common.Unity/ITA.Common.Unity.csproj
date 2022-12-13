@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <TargetFrameworks>netstandard2.0</TargetFrameworks>
+      <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
     <PropertyGroup>
@@ -35,7 +35,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="log4net" Version="2.0.15" />
     <PackageReference Include="Unity.Configuration" Version="5.10.0" />
     <PackageReference Include="Unity.Container" Version="5.10.3" />
   </ItemGroup>
@@ -43,6 +43,10 @@
   <ItemGroup>
     <ProjectReference Include="..\ITA.Common\ITA.Common.csproj" />
     <ProjectReference Include="..\ITA.Common.Host\ITA.Common.Host.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
   </ItemGroup>
 
   <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
@@ -62,13 +63,12 @@ namespace ITA.Common
     public class LocaleMessages
     {
         private static readonly ILog logger = Log4NetItaHelper.GetLogger(typeof(LocaleMessages).Name);
-        private readonly Dictionary<string,List<ResourceMappingInfo>> type2ResourceTable;
-
+        private readonly ConcurrentDictionary<string,List<ResourceMappingInfo>> type2ResourceTable;
         private static LocaleMessages globalInstance = new LocaleMessages();
 
         public LocaleMessages()
         {
-            type2ResourceTable = new Dictionary<string, List<ResourceMappingInfo>>();
+            type2ResourceTable = new ConcurrentDictionary<string, List<ResourceMappingInfo>>();
         }
 
         public static LocaleMessages GlobalInstance
@@ -90,33 +90,31 @@ namespace ITA.Common
                         logger.WarnFormat("Malformed AssemblyResourceInfoAttribute found inside assembly '{0}'. Its ExceptionType or ResourceName is null", A.FullName);
                         continue;
                     }
-                        
 
                     var rmi = new ResourceMappingInfo
-                        {
-                            ResourceAssembly = A, 
-                            ResourceName = attrib.ResourceName
-                        };
+                    {
+                        ResourceAssembly = A,
+                        ResourceName = attrib.ResourceName
+                    };
 
                     logger.Debug(rmi);
 
-                    List<ResourceMappingInfo> rmiList = null;
-                    if (type2ResourceTable.ContainsKey(attrib.ExceptionType.FullName))
+                    type2ResourceTable.AddOrUpdate(attrib.ExceptionType.FullName, key =>
                     {
-                        rmiList = type2ResourceTable[attrib.ExceptionType.FullName];
-                        if (rmiList.Contains(rmi))
-                            continue;
-                    }
-
-                    logger.DebugFormat("type2ResourceTable doesn't contain type '{0}'", attrib.ExceptionType.FullName);
-
-                    if (rmiList == null)
+                        logger.DebugFormat("type2ResourceTable doesn't contain type '{0}'", key);
+                        return new List<ResourceMappingInfo>
+                        {
+                            rmi
+                        };
+                    }, (_, list) =>
                     {
-                        rmiList = new List<ResourceMappingInfo>();
-                        type2ResourceTable.Add(attrib.ExceptionType.FullName, rmiList);
-                    }
+                        if (!list.Contains(rmi))
+                        {
+                            list.Add(rmi);
+                        }
 
-                    rmiList.Add(rmi);
+                        return list;
+                    });
                 }
             }
             finally
@@ -145,10 +143,10 @@ namespace ITA.Common
 
             try
             {
-                if (!type2ResourceTable.ContainsKey(typeFullName))
+                if (!type2ResourceTable.TryGetValue(typeFullName, out List<ResourceMappingInfo> rmiList))
+                {
                     return null;
-
-                var rmiList = type2ResourceTable[typeFullName];
+                }
 
                 logger.DebugFormat("type2ResourceTable contains mapping list for type '{0}' with {1} values.", typeFullName, rmiList.Count);
 

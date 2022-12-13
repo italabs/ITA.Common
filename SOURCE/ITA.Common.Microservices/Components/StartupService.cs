@@ -90,27 +90,28 @@ namespace ITA.Common.Microservices.Components
             services.AddSwagger(settings.SwaggerSettings);
         }
 
-        public virtual void Configure(IApplicationBuilder app)
+        public virtual void Configure(IApplicationBuilder application)
         {
-            app.UseCors(CorsPolicyName);
+            var basePath = _hostInfo.Path.HasValue ? _hostInfo.Path.Value : null;
+            application.ConfigureBasePath(
+                basePath,
+                app =>
+                {
+                    app.UseCors(CorsPolicyName);
+                
+                    ConfigureApplication(app);
 
-            if (_hostInfo.Path.HasValue)
-            {
-                app.UsePathBase(_hostInfo.Path.Value);
-            }
+                    app.UseApiVersioning();
 
-            ConfigureApplication(app);
+                    app.UseSwagger(_swaggerSettings.Value);
 
-            app.UseApiVersioning();
+                    if (_useAuthentication)
+                    {
+                        app.UseAuthentication();
+                    }
 
-            app.UseSwagger(_swaggerSettings.Value);
-
-            if (_useAuthentication)
-            {
-                app.UseAuthentication();
-            }
-
-            app.UseMvc();
+                    app.UseMvc();
+                });
         }
 
         private SwaggerSettings CreateSwaggerSettings()

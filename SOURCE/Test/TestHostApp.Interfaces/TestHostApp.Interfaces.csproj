@@ -22,6 +22,10 @@
     <ProjectReference Include="..\..\ITA.Common.Host\ITA.Common.Host.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+  </ItemGroup>
+
   <Import Project="$(SolutionDir)\..\EXTERNALS\ThirdParty\MSBuildCustomTargets\ITA.CSharp.targets" />
 
 </Project>

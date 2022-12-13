@@ -91,6 +91,7 @@ namespace ITA.Common.Microservices.Swagger
                             GetSwaggerJsonUrl(settings.SwaggerJsonUrl, DefaultSwaggerDocumentVersion),
                             settings.ApiTitle);
                     }
+                    options.EnableDeepLinking();
                 });
             }
 
